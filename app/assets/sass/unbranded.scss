@@ -1,0 +1,531 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// If you need to create a page as part of your journey, but without GOV.UK branding
+// See localhost:3000/examples/unbranded/
+
+// Override the govuk_frontend_toolkit's font stack
+// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_font_stack.scss#L13
+$toolkit-font-stack: $helvetica-regular;
+
+.unbranded {
+  background: $white;
+
+  // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
+  * {
+
+    font-family: $toolkit-font-stack !important;
+  }
+
+  // Remove GOV.UK footer styles
+  #footer {
+    border: 0;
+    background: $white;
+  }
+}
+
+.nav {
+    background-color: #dee0e2;
+    overflow: hidden;
+}
+
+.nav-pri {
+    width: 500px;
+    float: left;
+    margin: 0;
+}
+
+.nav-pri li {
+    float: left;
+    margin: 0;
+}
+
+.nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.nav-pri li.cur a, .nav-pri li.cur a:hover {
+    background-color: #28a197;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-pri li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #0b0c0c;
+    margin-right: none;
+    margin-left: 0;
+}
+
+// search and forms
+#header-search input.submit {
+	width: 40px;
+	height: 40px;
+    border: 0;
+    background-color: #28a197;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	overflow: hidden;
+	text-indent: -5000px;
+	cursor: pointer;
+	color: #fff;
+    background-image: url(/public/images/search_icon.png);
+    background-repeat: no-repeat;
+    
+}
+
+.form-control {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "nta", Arial, sans-serif;
+	font-size: 19px;
+	line-height: 1.5;
+	font-weight: 400;
+	text-transform: none;
+	padding: 4px;
+	background-color: #fff;
+	border: 2px solid #6f777b;
+}
+@media (max-width: 641px) {
+	.form-control {
+		width: 80%;
+	}
+}
+
+#global-header #logo {
+    background: none;
+}
+
+//tabs
+.nav-tabs {
+	zoom: 1;
+	background: #fff;
+	padding: 0;
+	position: relative;
+	border-bottom: 1px solid #bfc1c3;
+    margin-bottom: 30px;
+}
+
+.nav-tabs:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.nav-tabs ol,
+.nav-tabs ul {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 5;
+}
+@media (max-width: 640px) {
+	.nav-tabs ol,
+	.nav-tabs ul {
+		float: none;
+		margin: 0 -16px;
+	}
+}
+
+.nav-tabs li {
+	font-family: "nta",Arial,sans-serif;
+	font-size: 19px;
+	line-height: 1.3;
+	font-weight: 400;
+	text-transform: none;
+	float: left;
+	margin: 0 0 -1px;
+	/* margin-right: 5px;
+    margin-bottom:4px;*/
+}
+@media (max-width: 640px) {
+	.nav-tabs li {
+		font-size: 14px;
+		line-height: 1.14286;
+	}
+}
+@media (max-width: 640px) {
+	.nav-tabs li {
+		float: none;
+	}
+}
+
+.nav-tabs li a {
+	float: left;
+	background-color: #dee0e2;
+	border: 0 none;
+	/*height:2.25em;*/
+	/*line-height:2.25em;*/
+	display: block;
+	/* margin-bottom:-4px;
+    padding:0 1em 0 1em;*/
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	top: 0;
+	margin: 0.26316em 0.26316em 0.26316em 0;
+	padding: 0.47368em 1em;
+}
+@media (max-width: 640px) {
+	.nav-tabs li a {
+		display: block;
+		position: static;
+		float: none;
+		height: auto;
+		line-height: 3.5em;
+		padding: 0 16px;
+		text-align: left;
+		margin-bottom: 0;
+		border-bottom: 1px solid #bfc1c3;
+	}
+}
+
+.nav-tabs li a:hover {
+	color: #2e8aca;
+}
+
+.nav-tabs li.active a {
+	background-color: #fff;
+	color: #0b0c0c;
+	position: relative;
+	text-decoration: none;
+	z-index: 5;
+	border: 1px solid #bfc1c3;
+	border-bottom: 1px solid transparent;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0.68421em 0.94737em 0.73684em;
+}
+@media (max-width: 640px) {
+	.nav-tabs li.active a {
+		border: none;
+		border-bottom: 1px solid #bfc1c3;
+	}
+}
+
+.nav-tabs li.active a:hover {
+	color: inherit;
+}
+
+.nav-tabs li:first-child a {
+	margin-left: 0;
+}
+@media (max-width: 640px) {
+	.nav-tabs li:first-child a {
+		border-left: none;
+		border-top: 1px solid #bfc1c3;
+	}
+}
+
+.tab-content {
+	margin-top: 2em;
+}
+@media (max-width: 640px) {
+	.tab-content {
+		//margin:0 -1em
+	}
+}
+
+.tab-content .tab-pane {
+	// padding: 1em 1em 0 1em;
+	padding: 1em 0 0;
+	border-top: 1px solid #bfc1c3;
+	clear: both;
+	width: auto;
+}
+@media (max-width: 640px) {
+	.tab-content .tab-pane {
+		border-top: none;
+		padding: 0;
+	}
+}
+
+.tab-content .inner {
+	padding: 0 2.5em 1em;
+}
+@media (max-width: 640px) {
+	.tab-content .inner {
+		padding: 0 1em 1em;
+		border-bottom: solid 1px #C9D0D0;
+	}
+}
+
+.tab-content h1.visuallyhidden + h2 {
+	margin-top: 2em;
+}
+
+.tab-content p {
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.tab-content em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.tab-content nav {
+	margin: 1em -1.375em 0;
+}
+
+// forecast page
+.forecast-wrapper {
+	clear: both;
+	display: block;
+}
+
+.forecast-label {
+	width: 50%;
+	float: left;
+}
+
+.forecast-data-bold {
+	width: 40%;
+	float: left;
+	font-weight: 700;
+}
+
+.forecast-data-important {
+	width: 40%;
+	float: left;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.forecast-data-important2 {
+	font-weight: 700;
+}
+
+.forecast-data {
+	width: 40%;
+	float: left;
+}
+
+.forecast-wrapper2 {
+	clear: both;
+	width: 100%;
+	display: inline-block;
+	border-bottom: 1px solid #BFC1C3;
+	padding: 10px 0 15px 0;
+}
+
+.forecast-label2 {
+	width: 55%;
+	float: left;
+	font-size: 16px;
+	margin-right: 10px;
+	@media only screen and (max-width: 640px) {
+		margin-right: 10px;
+		width: 50%;
+	}
+}
+
+.forecast-label2-inline {
+	padding-top: 10px;
+	@media only screen and (max-width: 640px) {}
+}
+
+.forecast-data-bold2 {
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	padding-left: 20px
+}
+
+.forecast-data-important {
+	width: 40%;
+	float: left;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.forecast-data2 {
+	width: 40%;
+	font-size: 16px;
+	float: left;
+}
+
+.forecast-no-data {
+	font-size: 16px;
+	display: block;
+	clear: both;
+}
+
+.forecast-header {
+	font-size:16px;
+	font-weight: 700;
+}
+
+// accordion
+.ni-table dd,
+accordion dd {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.accordion  {
+	border-top: 1px solid #bfc1c3;
+	border-bottom: 1px solid #bfc1c3
+}
+
+.accordion2 dl {
+	margin-top: 100px;
+}
+
+
+.accordion2 dt,
+.ni-table dt {
+	border-top: 1px solid #bfc1c3;
+	padding-top: 10px;
+}
+
+.ni-wrapper {
+	display: inline-block;
+	clear: both;
+	width: 100%;
+	padding: 12px 0 15px;
+}
+
+.ni-years {
+	width: 25%;
+	float: left;
+	font-size: 16px;
+}
+
+.ni-years2 {
+	width: 20%;
+	float: left;
+	font-size: 16px;
+}
+
+.title {
+	cursor: pointer;
+	margin: 0;
+	color: #005ea5;
+	border: none;
+}
+
+.ni-cost {
+	width: 25%;
+	float: left;
+}
+
+.ni-payby {
+	width: 30%;
+	float: left;
+}
+
+.ni-full {
+	width: 40%;
+	float: left;
+	color: #999;
+}
+
+.ni-full2 {
+	color: #999;
+	font-size: 16px;
+}
+
+.ni-late {
+	width: 50%;
+	float: left;
+	color: #999;
+	font-size: 16px;
+}
+
+.ni-notfull {
+	width: 50%;
+	float: left;
+	font-size: 16px;
+}
+
+.ni-notfull2 {
+	width: 60%;
+	float: left;
+	font-size: 16px;
+}
+
+.ni-action {
+	width: 30%;
+	float: left;
+	text-align: right;
+}
+
+.ni-action-arrow {
+	width: 6%;
+	float: right;
+	background-image: url("/public/20/images/down-arrow.png");
+	background-size: 17px 15px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.ni-action-arrow2 {
+	width: 6%;
+	float: right;
+	background-size: 32px 50px;
+	background-repeat: no-repeat;
+}
+
+.ni-action-check {
+	width: 50%;
+	float: left;
+	background-color: #000;
+}
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+
+.govuk-related-items {
+	margin-top: $gutter;
+	border-top: 10px solid $govuk-blue;
+	padding-top: 5px;
+
+	.heading-medium {
+		margin-top: 0.3em;
+		margin-bottom: 0.5em;
+	}
+
+	li {
+		margin-bottom: 10px;
+		list-style-type: none;
+	}
+}
+
+.form-control-full {
+  width: 100%;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.column-one-half-right {
+	border-left: 1px solid #ccc;
+    padding-left: 40px
+}
+@media (max-width: 640px) {
+	.column-one-half-right {
+		border: 0;
+        padding-left: 15px
+	}
+}
+
+    
+   
