@@ -12,11 +12,12 @@ module.exports = router
 
 // enquiriesv5
 
+
 router.get('/results_confirm2', function (req, res) {
 
   var search = req.query.search ? req.query.search.toLowerCase() : '';
 
-  res.render('third_parties/results_confirm2', {
+  res.render('third_partiesv2/results_confirm2', {
     'search' : req.query.search,
     'QQ123456C': search === 'qq123456c',
     'DD678910C': search === 'dd678910c',
@@ -28,6 +29,7 @@ router.get('/results_confirm2', function (req, res) {
     'BG345678A': search === 'bg345678a'
   });
 });
+
 
 router.get('/results_confirm3', function (req, res) {
 
@@ -46,6 +48,7 @@ router.get('/results_confirm3', function (req, res) {
   });
 });
 
+
 // Branching
 
 router.get('/issue_address_customer', function (req, res) {
@@ -55,4 +58,5 @@ router.get('/issue_address_customer', function (req, res) {
   } else {   
     res.render('third_parties/issue_address_customer')
   }
+  
 })

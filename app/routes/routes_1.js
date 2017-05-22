@@ -16,7 +16,7 @@ router.get('/results_confirm2', function (req, res) {
 
   var search = req.query.search ? req.query.search.toLowerCase() : '';
 
-  res.render('test/results_confirm2', {
+  res.render('rre/results_confirm2', {
     'search' : req.query.search,
     'QQ123456C': search === 'qq123456c',
     'DD678910C': search === 'dd678910c',
