@@ -56,7 +56,7 @@ router.get('/issue_address_customer', function (req, res) {
   if (thirdparties === 'Third party') {
     res.redirect('issue_address_third_party')
   } else {   
-    res.render('third_parties/issue_address_customer')
+    res.render('third_partiesv2/issue_address_customer')
   }
   
 })

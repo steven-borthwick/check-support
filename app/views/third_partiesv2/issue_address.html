@@ -368,7 +368,7 @@
                     </div>
                 </fieldset>
                 </form>
-                <div id="#id12">
+                <div id="id12">
                     <fieldset>
 
                         <div style="width: 53%; float: left;">
@@ -411,7 +411,7 @@
                                 <br>Select address
                             </label>
                                 <div class="validation-wrapper">
-                                    {% include "includes/address_list.html" %}
+                                    {% include "includes/address_list2.html" %}
                                 </div>
                                 <!-- address wrapper end -->
                             </fieldset>
@@ -616,6 +616,13 @@
         $('#showMe').removeClass('js-hidden');
         $('#id3').addClass('js-hidden');
         $('#id4').addClass('js-hidden');
+    });
+        
+        $(document).on('change', '#uprn2', function () {
+        $('#select-address2').addClass('js-hidden');
+        $('#showMe2').removeClass('js-hidden');
+        $('#id32').addClass('js-hidden');
+        $('#id42').addClass('js-hidden');
     });
 </script>
 {% endblock %}

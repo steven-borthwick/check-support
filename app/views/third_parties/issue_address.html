@@ -368,14 +368,14 @@
                     </div>
                 </fieldset>
                 </form>
-                <div id="#id12">
+                <div id="id12">
                     <fieldset>
 
                         <div style="width: 53%; float: left;">
-                            <label for="address_postcode" class="form-label">
+                            <label for="address_postcode2" class="form-label">
                                 Postcode
                             </label>
-                            <input type="text" id="address_postcode2" name="address.postcode" class="form-control" style="width: 90%">
+                            <input type="text" id="address_postcode2" name="address.postcode2" class="form-control" style="width: 90%">
                         </div>
                         <div style="width: 47%; float: left;">
                             <button type="button" id="find-address2" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 25px">
@@ -389,7 +389,7 @@
 
                 <div id="id22" class="js-hidden">
                     <div style="width: 53%; float: left;">
-                        <label for="address_postcode" class="form-label">
+                        <label for="address_postcode2" class="form-label">
                             Postcode
                         </label>
                         <input type="text" id="address_postcode2" name="address.postcode" class="form-control" style="width: 90%" value="CH99 1XX">
@@ -402,16 +402,16 @@
                     <br>
                     </fieldset>
                     <!-- address wrapper start -->
-                    <div id="select-address">
+                    <div id="select-address2">
                         <form method="post" action="" class="form">
                             <fieldset>
-                                <input type="hidden" id="address_postcode" name="address.postcode" class="text hidden">
+                                <input type="hidden" id="address_postcode2" name="address.postcode" class="text hidden">
 
-                                <label for="address_uprn" class="form-label-bold">
+                                <label for="address_uprn2" class="form-label-bold">
                                 <br>Select address
                             </label>
                                 <div class="validation-wrapper">
-                                    {% include "includes/address_list.html" %}
+                                    {% include "includes/address_list2.html" %}
                                 </div>
                                 <!-- address wrapper end -->
                             </fieldset>
@@ -462,7 +462,7 @@
 
                 <div id="id32" class="js-hidden">
                     <div style="width: 50%; float: left;">
-                        <label for="address_postcode" class="form-label">
+                        <label for="address_postcode2" class="form-label">
                             Postcode
                         </label>
                         <input type="text" id="address_postcode2" name="address.postcode" class="form-control" style="width: 90%" value="CH99 1XX">
@@ -479,22 +479,22 @@
                             <fieldset class="multi-line-field">
 
                                 <legend class="label">Address</legend>
-                                <label for="lineOne" class="visuallyhidden">Address line one</label>
+                                <label for="lineOne2" class="visuallyhidden">Address line one</label>
                                 <input type="text" id="lineOne" name="lineOne" class="form-control">
-                                <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                                <label for="lineTwo2" class="visuallyhidden">Address line two</label>
                                 <input type="text" id="lineTwo" name="lineTwo" class="form-control">
                             </fieldset>
-                            <label for="city" class="hidden">Address line three</label>
+                            <label for="city2" class="hidden">Address line three</label>
                             <div class="validation-wrapper">
-                                <input type="text" id="city" name="city" class="form-control">
+                                <input type="text" id="city2" name="city2" class="form-control">
                             </div>
                             <label for="region" class="hidden">Address line four</label>
                             <div class="validation-wrapper">
-                                <input type="text" id="region" name="region" class="form-control">
+                                <input type="text" id="region2" name="region2" class="form-control">
                             </div>
                             <label for="country">Postcode</label>
                             <div class="validation-wrapper">
-                                <input type="text" id="country" name="country" class="form-control form-control-1-3" value="CH99 1XX">
+                                <input type="text" id="country2" name="country2" class="form-control form-control-1-3" value="CH99 1XX">
                             </div>
                             <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
                     </form>
@@ -510,22 +510,22 @@
                         <div class="form-group">
                             <fieldset class="multi-line-field">
                                 <legend class="label">Address</legend>
-                                <label for="lineOne" class="visuallyhidden">Address line one</label>
-                                <input type="text" id="lineOne" name="lineOne" class="form-control">
-                                <label for="lineTwo" class="visuallyhidden">Address line two</label>
-                                <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+                                <label for="lineOne2" class="visuallyhidden">Address line one</label>
+                                <input type="text" id="lineOne2" name="lineOne2" class="form-control">
+                                <label for="lineTwo2" class="visuallyhidden">Address line two</label>
+                                <input type="text" id="lineTwo2" name="lineTwo2" class="form-control">
                             </fieldset>
-                            <label for="city" class="hidden">Address line three</label>
+                            <label for="city2" class="hidden">Address line three</label>
                             <div class="validation-wrapper">
-                                <input type="text" id="city" name="city" class="form-control">
+                                <input type="text" id="city2" name="city2" class="form-control">
                             </div>
-                            <label for="region" class="hidden">Address line four</label>
+                            <label for="region2" class="hidden">Address line four</label>
                             <div class="validation-wrapper">
-                                <input type="text" id="region" name="region" class="form-control">
+                                <input type="text" id="region2" name="region2" class="form-control">
                             </div>
-                            <label for="country">Country</label>
+                            <label for="country2">Country</label>
                             <div class="validation-wrapper">
-                                <input type="text" id="country" name="country" class="form-control">
+                                <input type="text" id="country2" name="country2" class="form-control">
                             </div>
                             <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
                     </form>
@@ -618,6 +618,13 @@
         $('#showMe').removeClass('js-hidden');
         $('#id3').addClass('js-hidden');
         $('#id4').addClass('js-hidden');
+    });
+
+    $(document).on('change', '#uprn2', function () {
+        $('#select-address2').addClass('js-hidden');
+        $('#showMe2').removeClass('js-hidden');
+        $('#id32').addClass('js-hidden');
+        $('#id42').addClass('js-hidden');
     });
 </script>
 {% endblock %}
