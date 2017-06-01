@@ -51,7 +51,7 @@ $path: "/public/images/";
 }
 
 .nav-pri li.cur a, .nav-pri li.cur a:hover {
-    background-color: #28a197;
+    background-color: #005ea5;
     font-weight: bold;
     color: #fff;
 }
@@ -63,30 +63,4 @@ $path: "/public/images/";
     color: #0b0c0c;
     margin-right: none;
     margin-left: 0;
-}
-
-.big-number-with-status .big-number-link {
-    text-decoration: none;
-    background: #005ea5;
-    color: #fff;
-    display: block;
-    border: 2px solid #005ea5;
-    margin-bottom: 5px;
-}
-
-.big-number-with-status .big-number {
-    padding: 15px;
-    position: relative;
-    background: #0b0c0c;
-    color: #fff;
-}
-
-.big-number-label {
-    font-family: "nta",Arial,sans-serif;
-    font-weight: 400;
-    text-transform: none;
-    font-size: 16px;
-    line-height: 1.25;
-    display: inline-block;
-    padding-bottom: 10px;
 }
