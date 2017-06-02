@@ -56,6 +56,11 @@ $toolkit-font-stack: $helvetica-regular;
     color: #fff;
 }
 
+.nav-pri li.cur a:hover {
+    background-color: #1f7972;
+}
+
+
 .nav-pri li a {
     display: inline-block;
     padding: 15px;
