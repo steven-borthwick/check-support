@@ -350,7 +350,6 @@ $toolkit-font-stack: $helvetica-regular;
 	float: left;
 	font-size: 16px;
 	font-weight: 700;
-	padding-left: 20px
 }
 
 .forecast-data-important {
@@ -461,15 +460,16 @@ accordion dd {
 }
 
 .ni-notfull2 {
-	width: 60%;
+	width: 75%;
 	float: left;
 	font-size: 16px;
 }
 
 .ni-action {
-	width: 30%;
+	width: 20%;
 	float: left;
 	text-align: right;
+	font-size: 16px;
 }
 
 .ni-action-arrow {
@@ -525,11 +525,36 @@ accordion dd {
 	border-left: 1px solid #ccc;
     padding-left: 40px
 }
+
 @media (max-width: 640px) {
 	.column-one-half-right {
 		border: 0;
-        padding-left: 15px
+        padding-left: 15px;
 	}
+}
+
+.vnics td {
+  font-size: 16px;
+}
+
+.vnics_bold {
+  font-weight: 700;
+}
+
+.vnics th {
+  font-size: 16px;
+}
+
+.small-paragraph {
+  font-size: 16px;
+}
+
+.dob label {
+	font-size: 16px;
+}
+
+.dob {
+	padding-top: 20px;
 }
 
     

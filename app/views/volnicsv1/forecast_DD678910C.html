@@ -6,74 +6,83 @@
 
 {% block content %}
 <main id="content" role="main">
-    <div class="grid-row">
-       
-             <div class="column-full">
+  <div class="grid-row">
+
+    <div class="column-full">
       <div id="global-breadcrumb" class="breadcrumb">
         <a class="link-back" href="results_confirm2?search=QQ123456C">Back</a>
       </div>
-      <h1 class="heading-large">QQ123456C</h1>
+      <h1 class="heading-large">DD678910C</h1>
       <div class="tab-content">
         <div class="js-tabs nav-tabs">
           <ul class="tabs-nav" role="tablist">
             <li class="active"><a href="#current-sp-value" id="tab-overview">Overview</a></li>
+            <li><a href="#options-sp-value" id="tab-options">Options to improve</a></li>
+            <li><a href="#improve-sp-value" id="tab-contracting-out">Starting amount</a></li>
             <li><a href="#contracted-out" id="tab-ni-record">National Insurance summary</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div id="forecast" class="tab-pane">
-     
       <div class="column-half">
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">State Pension date</span> <span class="forecast-data-bold2">17 February 2023</span>
+          <span class="forecast-label2">State Pension date</span> <span class="forecast-data-bold2">7 September 2031</span>
         </div>
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Final relevant year (FRY)</span> <span class="forecast-data-bold2">2021-22<br>6 years to FRY
+          <span class="forecast-label2">Final relevant year (FRY)</span> <span class="forecast-data-bold2">2030-31</span>
+          <span class="forecast-label2">&nbsp;</span><span class="forecast-data-bold2  forecast-label2-inline">15 years to FRY
           </span>
         </div>
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Amount A basic</span> <span class="forecast-data-bold2">£119.42 a week</span>
-           <span class="forecast-label2 forecast-label2-inline">Additional pension</span> <span class="forecast-data-bold2 forecast-label2-inline">£3.24 a week</span>
-             <span class="forecast-label2 forecast-label2-inline">Total</span> <span class="forecast-data-bold2 forecast-label2-inline">£122.26 a week</span>
-        </div>
-        <div class="forecast-wrapper2">
-          <span class="forecast-label2">Amount B
-          </span> <span class="forecast-data-bold2">£124.52 a week</span>
-          <span class="forecast-label2 forecast-label2-inline">COPE (RDA)</span> <span class="forecast-data-bold2 forecast-label2-inline">£0</span>
+          <span class="forecast-label2">COPE estimate</span> <span class="forecast-data-bold2">£9.86</span>
+          <span class="forecast-no-data  forecast-header forecast-label2-inline">Was contracted out</span>
         </div>
       </div>
       <div class="column-half">
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Estimate up to 5 April 2016
-          </span> <span class="forecast-data-bold2">£124.52 a week</span>
-          <span class="forecast-label2 forecast-label2-inline">Qualifying years</span> <span class="forecast-data-bold2 forecast-label2-inline">29</span>
+          <span class="forecast-label2">Estimate up to 5 April 2017
+          </span> <span class="forecast-data-bold2">£149.44 a week</span>
+          <span class="forecast-label2 forecast-label2-inline">Qualifying years</span> <span class="forecast-data-bold2 forecast-label2-inline">35</span>
         </div>
 
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£155.65 a week</span>
-          <span class="forecast-label2 forecast-label2-inline">Future years needed</span> <span class="forecast-data-bold2 forecast-label2-inline">6</span>
+          <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£159.55 a week</span>
+          <span class="forecast-label2 forecast-label2-inline">Future years needed</span> <span class="forecast-data-bold2 forecast-label2-inline">3</span>
 
         </div>
         <div class="forecast-wrapper2">
-            <span class="forecast-label2">Most they can get</span> <span class="forecast-data-bold2">£155.65 a week</span>
+          <span class="forecast-label2">Most they can get</span> <span class="forecast-data-bold2">£159.55 a week</span>
         </div>
 
       </div>
     </div>
-       
-   
+    <div id="options" class="tab-pane">
+      <div class="column-two-thirds">
+        <h3 class="heading-small">Future years</h3>
+        <p class="small-paragraph">Will reach maximum £159.55 a week if contributes National Insurance for another 3 years.</p>
+         <h3 class="heading-small">Past years</h3>
+        <p class="small-paragraph">No fillable gaps in National Insurance record, cannot improve estimate to-date with past years.</p> 
+      </div>
+    </div>
 
+    <div id="contracting-out" class="tab-pane">
+      <div class="column-two-thirds">
+        <h3 class="heading-small">Unable to display starting amount</h3>
+      </div>
+      
+      
+    </div>
     <div id="ni-record" class="tab-pane">
       <div class="column-two-thirds">
 
         <h2 class="heading-small">Shortfalls in record</h2>
-        <p>15 years are too late to pay</p>
-        <dl class="accordion">
+        <p>1 year too late to pay</p>
+        <dl class="accordion2">
           <dt>
             <div class="ni-wrapper">
               <div class="ni-years2">2016-17</div>
-              <div class="ni-full2">This year is not available yet</div>
+              <div class="ni-notfull">This year is not available yet</div>
             </div>
           </dt>
         </dl>
@@ -86,19 +95,20 @@
 
               <nav role="navigation" aria-labelledby="parent-subsection">
                 <ul class="list-bullets">
-                  <li><span style="font-size: 16px"><span style="font-weight: 700">29</span> qualifying years </span></li>
-                  <li><span style="font-size: 16px"><span style="font-weight: 700">6</span> years to contribute before 05 April 2022</span></li>
-                  <li><span style="font-size: 16px"><span style="font-weight: 700">15</span> years with a shortfall</span></li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">35</span> qualifying years </span>
+                  </li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">15</span> years to contribute before 05 April
+                    2031</span>
+                  </li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">1</span> year with a shortfall</span>
+                  </li>
                 </ul>
-              </ul>
+            </ul>
             </nav>
-          </aside>
-
-        </div>
+        </aside>
+      </div>
     </div>
-
   </div>
-
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -119,7 +129,21 @@ jQuery(document).ready(function($){
     $("#forecast").show();
     $("#ni-record").hide();
     $("#contracting-out").hide();
+    $("#contracting-out").hide();
+    $("#options").hide();
     window.location.hash = "#lie-forecast";
+    return false;
+  });
+
+  $("a#tab-options").click(function() {
+    $(".tabs-nav li").removeClass("active");
+
+    $(this).parent().addClass("active");
+     $("#options").show();
+    $("#forecast").hide();
+    $("#ni-record").hide();
+    $("#contracting-out").hide();
+    window.location.hash = "#lie-options";
     return false;
   });
 
@@ -130,6 +154,7 @@ jQuery(document).ready(function($){
     $("#ni-record").show();
     $("#contracting-out").hide();
     $("#forecast").hide();
+    $("#options").hide();
     window.location.hash = "#lie-ni-record";
     return false;
   });
@@ -142,6 +167,7 @@ jQuery(document).ready(function($){
     $("#contracting-out").show();
     $("#ni-record").hide();
     $("#forecast").hide();
+    $("#options").hide();
     window.location.hash = "#lie-contracting-out";
     return false;
   });
@@ -155,6 +181,10 @@ jQuery(document).ready(function($){
 
   else if (window.location.hash === "#lie-contracting-out") {
     $("a#tab-contracting-out").trigger('click');
+  }
+
+  else if (window.location.hash === "#lie-optionst") {
+    $("a#tab-options").trigger('click');
   }
 });
 
