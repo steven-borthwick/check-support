@@ -69,13 +69,13 @@
           </span> <span class="forecast-data-bold2">£120.10 a week</span>
           <span class="forecast-label2 forecast-label2-inline">Qualifying years</span> <span class="forecast-data-bold2 forecast-label2-inline">28</span>
         </div>
-        <h2 class="heading-small">1. Check if they'll contribute enough future years to reach their forecast</h2>
+        <h2 class="heading-small">If they contribute another 9 years </h2>
           <div class="forecast-wrapper2">
-          <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£159.55 a week</span>
-          <span class="forecast-label2 forecast-label2-inline">Future years</span> <span class="forecast-data-bold2 forecast-label2-inline">9</span>
+          <span class="forecast-label2">Future forecast</span> <span class="forecast-data-bold2">£159.55 a week</span>
         </div>
         <a name="jump"></a>
-          <h2 class="heading-small">2. Change number of future years if they won't reach their forecast</h2>
+          <h2 class="heading-small">If they don't contribute another 9 years</h2>
+          <p class="small-paragraph">Select how many years they'll contribute.</p>
         <div class="column-one-half" style="margin-left: -15px">
         <form action="" class="form" method="post" style="padding-top: 20px; padding-bottom: 10px;">
        
@@ -83,9 +83,10 @@
                                 <input type="hidden" id="address_postcode" name="address.postcode" class="text hidden">
 
                                 <label for="years" class="form-label-bold">
-          
+            
                             </label>
                                 <div class="validation-wrapper">
+                                
                                  <select id="years" name="years" class="form-control" style="width: 100%" data-validation-name="addressSelect" data-validation-type="field"
     data-validation-rules="nonEmpty">
                 <option value="9">Select future years</option>
@@ -129,8 +130,8 @@
 
         </div>
           
-           <h3 class="heading-small">3. Check if can improve with past years</h3>
-        <p class="small-paragraph">Can improve £120.10 a week by filling gaps in National Insurance record</p>
+           <h3 class="heading-small">Can get more than £120.10 a week by filling gaps</h3>
+       
       <table class="vnics"><tr><th>Gaps filled</th><th>Old rules</th><th>New rules</th></tr>
         <tr><td>0</td><td class="vnics_bold">£120.10 a week</td><td>£108.33 a week</td></tr>
            <tr><td>1</td><td class="vnics_bold">£124.17 a week</td><td>£112.89 a week</td></tr>
@@ -149,8 +150,7 @@
           <span class="forecast-label2">Estimate contributing 1 future year</span> <span class=     "forecast-data-bold2">£124.65 a week</span>
 
         </div>
-           <h3 class="heading-small">3. Check if can improve with past years</h3>
-        <p class="small-paragraph">Can improve £124.65 by filling gaps in National Insurance record</p>
+           <h3 class="heading-small">Can get more than £124.65 by filling gaps</h3>
        <table class="vnics"><tr><th>Gaps filled</th><th>Old rules</th><th>New rules</th></tr>
         <tr><td>0</td><td class="vnics_bold">£124.65 a week</td><td>£112.89 a week</td></tr>
            <tr><td>1</td><td class="vnics_bold">£128.73 a week</td><td>£117.45 a week</td></tr>
@@ -168,8 +168,7 @@
           <span class="forecast-label2">Estimate contributing 2 future years</span> <span class="forecast-data-bold2">£129.31 a week</span>
 
         </div>
-           <h3 class="heading-small">3. Check if can improve with past years</h3>
-        <p class="small-paragraph">Can improve £129.31 a week by filling gaps in National Insurance record</p>
+           <h3 class="heading-small">Can get more than £129.31 a week by filling gaps</h3>
        <table class="vnics"><tr><th>Gaps filled</th><th>Old rules</th><th>New rules</th></tr>
         <tr><td>0</td><td class="vnics_bold">£129.31 a week</td><td>£117.45 a week</td></tr>
            <tr><td>1</td><td class="vnics_bold">£134.17 a week</td><td>£122.00 a week</td></tr>
@@ -181,16 +180,15 @@
         </div>
         {% else %}
         
-     <br>
+   
        <div class="forecast-wrapper3">
          <!--  <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£159.55 a week</span>
           <span class="forecast-label2 forecast-label2-inline">Future years</span> <span class="forecast-data-bold2 forecast-label2-inline">9</span>
 
         </div>-->
        
-         <h3 class="heading-small">3. Check if can improve with past years</h3>
-        <p class="small-paragraph">Cannot improve £159.55 a week by filling gaps in National Insurance record. </p>
-        </div>
+         <h3 class="heading-small">Can't get more than £159.55 a week by filling gaps</h3>
+
         {% endif %}
     </div>
     </div>
