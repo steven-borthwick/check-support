@@ -12,13 +12,251 @@
                 <a class="link-back" href="results_confirm2?search=qq123456c">Back</a>
                 <h1 class="heading-large" style="margin: 11px 0 40px 0">Enter details for QQ123456C</h1>
                 <form>
-                
+                <fieldset class="inline" data-required data-error="Choose Yes or No">
+                    <legend><span style="font-weight: 700">Is the statement for a customer or a third party? </span></legend>
+                    <div class="form-group">
+                        <label class="block-label" for="radio-a">                    
+                            <input id="radio-a" type="radio" name="third_party" value="Customer" checked="checked"> Customer
+                        </label>
+                        <label class="block-label" for="radio-b">
+                            <input id="radio-b" type="radio" name="third_party" value="Third party"> Third party
+                        </label>
+                    </div>
+                </fieldset>
                 </form>
             </div>
         </div>
     </div>
-   
-    <div id="third-party">
+    <div id="customer">
+    
+        <h2 class="heading-medium">Name</h2>
+        <div class="grid-row">
+            <div class="column-third">
+                <div class="form-group">
+
+                    <fieldset class="multi-line-field" data-required data-error="Select title">
+                        <label class="form-label" for="select-box">Title</label>
+                        <select id="select-box" class="form-control" style="width: 100%">
+                            <option disable selected value="">Please select</option>
+                            <option>Mr</option>
+                            <option>Mrs</option>
+                            <option>Miss</option>
+                            <option>Ms</option>
+                            <option>Dr</option>
+                            <option>Prof</option>
+                            <option>Rev</option>
+                            <option>Sir</option>
+                            <option>Lady</option>
+                            <option>Lord</option>
+                            <option>Dame</option>
+                        </select>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="column-third">
+                <div class="form-group">
+                    <fieldset class="multi-line-field" data-required data-error="Enter first names">
+                        <label class="form-label" for="first-name">First names</label>
+                        <input id="first-name" type="text" class="form-control form-control-full">
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="column-third">
+                <div class="form-group">
+                    <fieldset class="multi-line-field" data-required data-error="Enter last name">
+                        <label class="form-label" for="last-name">Last name</label>
+                        <input id="last-name" type="text" class="form-control form-control-full">
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-medium">Address</h2>
+                <form>
+                <fieldset class="inline" data-required data-error="Choose Yes or No">
+                    <legend><span style="font-weight: 700">Is the address to send the forecast in the UK or overseas? </span></legend>
+                    <div class="form-group">
+                        <label class="block-label" for="radio-1">
+                            <input id="radio-1" type="radio" name="address_UK" value="Yes" checked="checked"> UK
+                        </label>
+                        <label class="block-label" for="radio-2">
+                            <input id="radio-2" type="radio" name="address_UK" value="No"> Overseas
+                        </label>
+
+                    </div>
+                </fieldset>
+                </form>
+                <div id="id1">
+                    <fieldset>
+
+                        <div style="width: 53%; float: left;">
+                            <label for="address_postcode" class="form-label">
+                                Postcode
+                            </label>
+                            <input type="text" id="address_postcode" name="address.postcode" class="form-control" style="width: 90%">
+                        </div>
+                        <div style="width: 47%; float: left;">
+                            <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 25px">
+                                Find address
+                            </button>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- ID1 postcode end -->
+                <!-- ID2 address finder start  -->
+
+                <div id="id2" class="js-hidden">
+                    <div style="width: 53%; float: left;">
+                        <label for="address_postcode" class="form-label">
+                            Postcode
+                        </label>
+                        <input type="text" id="address_postcode" name="address.postcode" class="form-control" style="width: 90%" value="CH99 1XX">
+                    </div>
+                    <div style="width: 47%; float: left;">
+                        <button type="button" id="find-again" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 25px">
+                            Find address
+                        </button>
+                    </div>
+                    <br>
+                    </fieldset>
+                    <!-- address wrapper start -->
+                    <div id="select-address">
+                        <form method="post" action="" class="form">
+                            <fieldset>
+                                <input type="hidden" id="address_postcode" name="address.postcode" class="text hidden">
+
+                                <label for="address_uprn" class="form-label-bold">
+                                <br>Select address
+                            </label>
+                                <div class="validation-wrapper">
+                                    {% include "includes/address_list.html" %}
+                                </div>
+                                <!-- address wrapper end -->
+                            </fieldset>
+
+                            <p style="padding-top: 20px;">
+                                <!--  <a href="print_v2?address_same=Yes" class="button">
+              Generate forecast
+            </a>-->
+                                <a href="change_address_postcode" id="cant-find">
+              I can’t find the address in the list<span class="visuallyhidden"> section</span>
+            </a>
+                            </p>
+                        </form>
+                    </div>
+                    <div id="showMe" class="js-hidden" style="margin-top: 50px">
+                        <br>
+                        <form action="print?address_same=Yes" class="form">
+                            <div class="form-group">
+                                <fieldset class="multi-line-field">
+
+                                    <legend class="label"><span style="font-weight: 700">Check address</span></legend>
+                                    <label for="lineOne" class="visuallyhidden">Address line one</label>
+                                    <input type="text" id="lineOne" name="lineOne" class="form-control" value="10 West Avenue">
+                                    <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                                    <input type="text" id="lineTwo" name="lineTwo" class="form-control" value="Birkenhead">
+                                </fieldset>
+                                <label for="city" class="hidden">Address line three</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="city" name="city" class="form-control" value="Wirral">
+                                </div>
+                                <label for="region" class="hidden">Address line four</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="region" name="region" class="form-control">
+                                </div>
+                                <label for="country">Postcode</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="country" name="country" class="form-control form-control-1-3" value="CH99 1XX">
+                                </div>
+                                <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                        </form>
+                        <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- ID2 address select end  -->
+
+                <div id="id3" class="js-hidden">
+                    <div style="width: 50%; float: left;">
+                        <label for="address_postcode" class="form-label">
+                            Postcode
+                        </label>
+                        <input type="text" id="address_postcode" name="address.postcode" class="form-control" style="width: 90%" value="CH99 1XX">
+                    </div>
+                    <div style="width: 50%; float: left;">
+                        <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 25px">
+                            Find address
+                        </button>
+                        <br>
+                        <br>
+                    </div>
+                    <form action="print?address_same=Yes" class="form">
+                        <div class="form-group">
+                            <fieldset class="multi-line-field">
+
+                                <legend class="label">Address</legend>
+                                <label for="lineOne" class="visuallyhidden">Address line one</label>
+                                <input type="text" id="lineOne" name="lineOne" class="form-control">
+                                <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                                <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+                            </fieldset>
+                            <label for="city" class="hidden">Address line three</label>
+                            <div class="validation-wrapper">
+                                <input type="text" id="city" name="city" class="form-control">
+                            </div>
+                            <label for="region" class="hidden">Address line four</label>
+                            <div class="validation-wrapper">
+                                <input type="text" id="region" name="region" class="form-control">
+                            </div>
+                            <label for="country">Postcode</label>
+                            <div class="validation-wrapper">
+                                <input type="text" id="country" name="country" class="form-control form-control-1-3" value="CH99 1XX">
+                            </div>
+                            <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                    </form>
+                    <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
+                    </div>
+
+
+                </div>
+
+                <div id="id4" class="js-hidden">
+
+                    <form action="print?address_same=Yes" class="form">
+                        <div class="form-group">
+                            <fieldset class="multi-line-field">
+                                <legend class="label">Address</legend>
+                                <label for="lineOne" class="visuallyhidden">Address line one</label>
+                                <input type="text" id="lineOne" name="lineOne" class="form-control">
+                                <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                                <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+                            </fieldset>
+                            <label for="city" class="hidden">Address line three</label>
+                            <div class="validation-wrapper">
+                                <input type="text" id="city" name="city" class="form-control">
+                            </div>
+                            <label for="region" class="hidden">Address line four</label>
+                            <div class="validation-wrapper">
+                                <input type="text" id="region" name="region" class="form-control">
+                            </div>
+                            <label for="country">Country</label>
+                            <div class="validation-wrapper">
+                                <input type="text" id="country" name="country" class="form-control">
+                            </div>
+                            <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                    </form>
+                    <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
+                    <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="third-party" class="js-hidden">
            <h2 class="heading-medium">Customer name</h2>
         <div class="grid-row">
             <div class="column-third">
@@ -104,12 +342,19 @@
                 </div>
             </div>
         </div>
-   
+        <div class="grid-row">
+            <div class="column-two-thirds"> 
+                  <div class="form-group">
+                                <fieldset class="multi-line-field">
+                                    <label class="form-label" for="lineOne">Organisation name (optional)</label>
+                                    <input type="text" id="lineOne" name="lineOne" class="form-control">
+                </div>
+            </div>
         </div>    
         <div class="grid-row">
             <div class="column-two-thirds">
+                <h2 class="heading-medium">Address</h2>
                 <form>
-                <h2 class="heading-medium">Third party address and organisation name</h2>
                 <fieldset class="inline" data-required data-error="Choose Yes or No">
                     <legend><span style="font-weight: 700">Is the address to send the forecast in the UK or overseas? </span></legend>
                     <div class="form-group">
@@ -157,12 +402,12 @@
                     <br>
                     </fieldset>
                     <!-- address wrapper start -->
-                    <div id="select-address2">
+                    <div id="select-address">
                         <form method="post" action="" class="form">
                             <fieldset>
                                 <input type="hidden" id="address_postcode" name="address.postcode" class="text hidden">
 
-                                <label for="address_uprn2" class="form-label-bold">
+                                <label for="address_uprn" class="form-label-bold">
                                 <br>Select address
                             </label>
                                 <div class="validation-wrapper">
@@ -206,30 +451,7 @@
                                     <input type="text" id="country" name="country" class="form-control form-control-1-3" value="CH99 1XX">
                                 </div>
                                 <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
-                                
-                
-                <fieldset class="inline" data-required data-error="Choose Yes or No">
-                    <legend><span style="font-weight: 700">Is there an organisation name in the address?</span></legend>
-                    <div class="form-group">
-                        <label class="block-label" for="radio-org-yes">
-                            <input id="radio-org-yes" type="radio" name="organisation" value="Yes"> Yes
-                        </label>
-                        <label class="block-label" for="radio-org-no">
-                            <input id="radio-org-no" type="radio" name="organisation" value="No"> No
-                        </label>
-
-                    </div>
-                </fieldset>
-                
                         </form>
-                            
-            
-                  <div class="form-group js-hidden" id="org-name">
-                                <fieldset class="multi-line-field">
-                                    <label class="form-label" for="lineOne">Organisation name</label>
-                                    <input type="text" id="lineOne" name="lineOne" class="form-control">
-                </div>
-         
                         <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
                         </div>
 
@@ -322,7 +544,33 @@
         var txtbox = document.getElementById('search-main');
         txtbox.value = txtbox.value.replace(/\s/g, "");
     }
-    
+    $(document).on('click', '#find-address', function () {
+        $('#id1,#id3,#id4').addClass('js-hidden');
+        $('#id2').removeClass('js-hidden');
+    });
+
+    $(document).on('click', '#find-again', function () {
+        $('#showMe').addClass('js-hidden');
+        $('#select-address').removeClass('js-hidden');
+    });
+
+    $(document).on('click', '#cant-find', function (e) {
+        e.preventDefault();
+        $('#id2').addClass('js-hidden');
+        $('#id3').removeClass('js-hidden');
+    });
+
+    $(document).on('click', 'input[type="radio"]', function (e) {
+        if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+            if ($(this).attr('id') === 'radio-1') {
+                $('#id1').removeClass('js-hidden');
+                $('#id2,#id3,#id4').addClass('js-hidden');
+            } else {
+                $('#id4').removeClass('js-hidden');
+                $('#id1,#id2,#id3').addClass('js-hidden');
+            }
+        }
+    });
      $(document).on('click', '#find-address2', function () {
         $('#id12,#id32,#id42').addClass('js-hidden');
         $('#id22').removeClass('js-hidden');
@@ -350,18 +598,6 @@
             }
         }
     });
-
-     $(document).on('click', 'input[type="radio"]', function (e) {
-        if ($(e.target).attr('id') === 'radio-org-no' || $(e.target).attr('id') === 'radio-org-yes') {
-            if ($(this).attr('id') === 'radio-org-yes') {
-                $('#org-name').addClass('js-hidden');
-            } else {
-                $('#org-name').removeClass('js-hidden');
-            }
-        }
-    });
-
-
     $(document).on('click', 'input[type="radio"]', function (e) {
         if ($(e.target).attr('id') === 'radio-a' || $(e.target).attr('id') === 'radio-b') {
             if ($(this).attr('id') === 'radio-a') {
@@ -381,8 +617,8 @@
         $('#id3').addClass('js-hidden');
         $('#id4').addClass('js-hidden');
     });
-
-          $(document).on('change', '#uprn2', function () {
+        
+        $(document).on('change', '#uprn2', function () {
         $('#select-address2').addClass('js-hidden');
         $('#showMe2').removeClass('js-hidden');
         $('#id32').addClass('js-hidden');
