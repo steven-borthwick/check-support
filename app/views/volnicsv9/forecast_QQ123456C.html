@@ -73,7 +73,7 @@
                 {% if years == '0' %}
           <div id="0">
      
-          
+           <div id="spinner" style="background: url('/public/images/loading.gif') no-repeat; height: 200px"></div>
          
        <h3 class="heading-small">Can get more than £120.10 a week by filling gaps</h3>
       <table class="vnics"><tr><th>Gaps filled</th><th>Old rules</th><th>New rules</th></tr>
@@ -87,6 +87,7 @@
         </div>
         {% elif years == '1' %}
           <div id="1">
+             <div id="spinner" style="background: url('/public/images/loading.gif') no-repeat; height: 200px"></div>
          <h2 class="heading-small">Forecast</h2>
          <div class="forecast-wrapper2">
           <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£124.65 a week</span>
@@ -107,7 +108,9 @@
               </table>
         </div>
         {% elif years == '2' %}
+       
         <div id="2">
+           <div id="spinner" style="background: url('/public/images/loading.gif') no-repeat; height: 200px"></div>
          <h2 class="heading-small">Forecast</h2>
          <div class="forecast-wrapper2">
           <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£129.21 a week</span>
@@ -352,7 +355,9 @@ jQuery(document).ready(function($){
     $("a#tab-options").trigger('click');
   }
 });
-
+ $(document).ready( function() {
+        $('#spinner').delay(200).fadeOut();
+      });
 
 </script>
         </div>
