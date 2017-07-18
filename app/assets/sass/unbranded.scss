@@ -443,6 +443,37 @@ accordion dd {
 	font-size: 16px;
 }
 
+.ni-years3 {
+	width: 23%;
+	float: left;
+	font-size: 16px;
+}
+
+.ni-amount3 {
+	width: 23%;
+	float: left;
+	font-size: 16px;
+}
+
+.ni-QY3 {
+	width: 20%;
+	float: left;
+	font-size: 16px;
+}
+
+.ni-future3 {
+	width: 23%;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+}
+
+.ni-action3 {
+	width: 10%;
+	float: left;
+	font-size: 16px;
+}
+
 .title {
 	cursor: pointer;
 	margin: 0;
@@ -614,6 +645,101 @@ accordion dd {
 .alert-warning {
   border-color: $red;
  
+}
+
+// modelling gaps options
+
+.options-wrapper {
+    display: inline-block; 
+    clear: both;
+    width: 100%;
+    padding: 25px 0 0px 0;
+    border-top: 1px solid #BFC1C3;
+}
+
+.options-wrapper p {
+    font-size: 16px;
+}
+
+.options-gaps {
+    width: 22%;
+    float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-gaps {
+    width: 50%;
+    float: left;
+  }
+}
+
+
+.options-estimate {
+  width: 30%;
+  float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-estimate {
+    width: 50%;
+    float: left;
+  }
+}
+
+.options-forecast {
+  width: 25%;
+  float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-forecast {
+    width: 50%;
+    float: right;
+  }
+}
+
+
+
+.options-button {
+  width: 20%;
+  padding-top: 10px;
+  float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-button {
+    width: 100%;
+    padding-top: 0px;
+	text-align: right;
+	padding-right: 100px;
+    float: right;
+  }
+}
+
+.options-data {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px)
+{
+.options-data {
+    font-size: 18px;
+  }
+}
+
+.options-flag {
+    border-left: 5px solid #2b8cc4;
+    padding-left: 10px;
+    margin: 0px 0 10px 0;
+    float: left;
+    width: 100%;
+    display: block;
+    clear: both;
 }
 
     
