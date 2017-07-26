@@ -12,20 +12,19 @@
       <div id="global-breadcrumb" class="breadcrumb">
         <a class="link-back" href="results_confirm2?search=QQ123456C">Back</a>
       </div>
-      <h1 class="heading-large">QQ123456C</h1>
-                          <div class="panel panel-border-wide alert-warning">Has paid Reduced Rate Election</div>
-
+      <h1 class="heading-large">FF654321B</h1>
       <div class="tab-content">
         <div class="js-tabs nav-tabs">
           <ul class="tabs-nav" role="tablist">
-            <li class="{% if years == undefined %}active{% endif %}"><a href="#current-sp-value" id="tab-overview">Overview</a></li>
+            <li class="active"><a href="#current-sp-value" id="tab-overview">Overview</a></li>
+            <li><a href="#options-sp-value" id="tab-options">Options to improve</a></li>
             <li><a href="#improve-sp-value" id="tab-contracting-out">Starting amount</a></li>
             <li><a href="#contracted-out" id="tab-ni-record">National Insurance summary</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div id="forecast" class="tab-pane" style="{% if years %}display:none{% endif %}">
+    <div id="forecast" class="tab-pane">
       <div class="column-half">
         <div class="forecast-wrapper2">
           <span class="forecast-label2">State Pension date</span> <span class="forecast-data-bold2">4 May 2034</span>
@@ -42,23 +41,33 @@
       </div>
       <div class="column-half">
         <div class="forecast-wrapper2">
-           <span class="forecast-header">Own entitlement</span>
-          <span class="forecast-label2">Estimate up to 5 April 2017
-          </span> <span class="forecast-data-bold2">£80.00 a week</span>
+          <span class="forecast-label2">Estimate up to 5 April 2016
+          </span> <span class="forecast-data-bold2">£120.10 a week</span>
           <span class="forecast-label2 forecast-label2-inline">Qualifying years</span> <span class="forecast-data-bold2 forecast-label2-inline">28</span>
         </div>
 
         <div class="forecast-wrapper2">
-          <span class="forecast-header">Reduced Rate Election entitlement</span>
-          <span class="forecast-label2">If married</span> <span class="forecast-data-bold2">£99.10 a week</span>
-      
-           <span class="forecast-label2 forecast-label2-inline">If widowed or divorced</span> <span class="forecast-data-bold2 forecast-label2-inline">£120.22 a week</span>
+          <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£159.55 a week</span>
+          <span class="forecast-label2 forecast-label2-inline">Future years needed</span> <span class="forecast-data-bold2 forecast-label2-inline">9</span>
+
         </div>
-       
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">Most they can get</span> <span class="forecast-data-bold2">£159.55 a week</span>
+        </div>
+
       </div>
     </div>
-    
-    <div id="contracting-out" class="tab-pane" style="display: none">
+    <div id="options" class="tab-pane">
+      <div class="column-two-thirds">
+        <h3 class="heading-small">Future years</h3>
+        <p class="small-paragraph">Can reach £159.55 a week by contributing National Insurance for 9 more years.</p>
+         <h3 class="heading-small">Past years</h3>
+       <p class="small-paragraph">Unable to show improvements to current estimate, needs to be calculated manually. </p>
+      
+      </div>
+    </div>
+
+    <div id="contracting-out" class="tab-pane">
       <div class="column-two-thirds">
         <h3 class="heading-small">Starting amount at April 2016 is £117.16 a week</h3>
       </div>
@@ -88,7 +97,7 @@
       </div>
       
     </div>
-    <div id="ni-record" class="tab-pane" style="display: none">
+    <div id="ni-record" class="tab-pane">
       <div class="column-two-thirds">
 
         <h2 class="heading-small">Shortfalls in record</h2>
@@ -166,6 +175,7 @@
 
 jQuery(document).ready(function($){
 
+
   $("a#tab-overview").click(function() {
     $(".tabs-nav li").removeClass("active");
 
@@ -236,4 +246,11 @@ jQuery(document).ready(function($){
 </script>
         </div>
 </main>
+<script type="text/javascript">
+    function removeWhitespaces() {
+        var txtbox = document.getElementById('search-main');
+        txtbox.value = txtbox.value.replace(/\s/g, "");
+    }
+
+</script>
 {% endblock %}

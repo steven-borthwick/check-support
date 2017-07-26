@@ -382,6 +382,9 @@ $toolkit-font-stack: $helvetica-regular;
 .forecast-header {
 	font-size:16px;
 	font-weight: 700;
+	display: block;
+	clear: both;
+	padding-bottom: 14px;
 }
 
 // accordion
