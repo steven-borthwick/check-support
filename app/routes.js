@@ -21,6 +21,7 @@ var routes16 = require('./routes/routes_16');
 var routes17 = require('./routes/routes_17');
 var routes18 = require('./routes/routes_18');
 var routes19 = require('./routes/routes_19');
+var routes20 = require('./routes/routes_20');
 
 // Route index page
 router.use('/third_parties', routes1);
@@ -41,6 +42,7 @@ router.use('/volnicsv11', routes15);
 router.use('/RREv1', routes16);
 router.use('/RREv2', routes17);
 router.use('/volnicsv13', routes19);
+router.use('/volnicsv1a', routes20);
 
 
 module.exports = router
