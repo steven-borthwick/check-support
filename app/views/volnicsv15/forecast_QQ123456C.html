@@ -60,6 +60,7 @@
             <fieldset class="inline" data-required data-error="Choose Yes or No">
               <legend><span style="font-weight: 700">When will they stop contributing National Insurance
 through work?</span></legend>
+<br>
               <div class="form-group">
                 <label class="block-label" for="radio-1">
                             <input id="radio-1" type="radio" name="increaseby" value="date" {% if age == undefined %} checked="checked" {% endif %}>By date
@@ -81,7 +82,8 @@ through work?</span></legend>
               <div class="form-date">
                 <div class="form-group form-group-day">
                 </div>
-                <legend>Change the date if they won't work until their State Pension Age</p>
+                <legend>Change the date if they won't work until their State Pension Age</legend>
+                <br>
                   <div class="form-group form-group-month">
                     <label for="dob-month">Month</label>
                     <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="11">
@@ -179,9 +181,9 @@ through work?</span></legend>
 
                 <div class="form-group form-group-day">
                 </div>
-                <legend>Change the age if they won't work until their State Pension Age</p>
+                <legend>Change the age if they won't work until their State Pension Age</legend>
 
-
+                  <br>
                   <div class="form-group form-group-year">
                     <label for="dob-year">Age</label>
                     <input class="form-control" id="age" name="age" type="number" pattern="[0-9]*" min="0" max="68" value="{{ age | default('67') }}">
