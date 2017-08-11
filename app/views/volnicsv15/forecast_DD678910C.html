@@ -61,28 +61,38 @@
     <div id="options" class="tab-pane">
       <div class="column-two-thirds">
            
-
+<div class="forecast-wrapper2">
 <h3 class="heading-small">From 5 April 2017, how many more years will they contribute through working?</h3>
         <select name="type" id="type" class="form-control">
-                <option ame="l_letter" value="l_letter">0 years</option>
-                <option name="letter" value="letter">1 year</option>
-                <option name="parcel" value="parcel">2 years</option>
-                <option name="parcel" value="parcel">3 years</option>
-                <option name="parcel" value="parcel">4 years</option>
-                <option name="parcel" value="parcel">5 years</option>
-                <option name="parcel" value="parcel">6 years</option>
-                <option name="parcel" value="parcel">7 years</option>
-                <option name="parcel" value="parcel">8 years</option>
-                <option name="parcel" value="parcel" selected="selected">9 or more years</option>
+                <option name="0" value="0">0 years</option>
+                <option name="1" value="1">1 year</option>
+                <option name="2" value="2">2 years</option>
+                <option name="3" value="3">3 years</option>
+                <option name="4" value="4">4 years</option>
+                <option name="5" value="5">5 years</option>
+                <option name="6" value="6">6 years</option>
+                <option name="7" value="7">7 years</option>
+                <option name="8" value="8">8 years</option>
+                <option name="9" value="9" selected="selected">9 or more years</option>
         </select>                    
 
+</div>
+ <div id="9" class="forecast-wrapper2">
+          <h3 class="heading-small">Contributing 9 or more years will increase the estimate</h3>
+          
+          <div class="forecast-wrapper3">
+         
+    <span class="forecast-label2"><span style="font-weight: 700">From</span><br>Estimate up to 5 April 2017</span> <span class="forecast-data-bold2"><br>£159.55 a week</span>
+   
 
-<div class="row" id="row_dim">
-    Dimensions
-        <input type="text" name="length" style="margin-left:12px;" class="dimension" placeholder="Length">
-        <input type="text" name="width" class="dimension" placeholder="Width">
-        <input type="text" name="height" class="dimension" placeholder="Height">
-</div>  
+        </div>
+       <div class="forecast-wrapper3">
+         
+    <span class="forecast-label2"><span style="font-weight: 700">To</span><br>Estimate up to 5 April 2019</span> <span class="forecast-data-bold2"><br>£159.55 a week</span>
+    <span class="forecast-label2 forecast-label2-inline">Last year of contributions</span> <span class="forecast-data-bold2  forecast-label2-inline">2018-19</span>
+        </div>
+          <p class="small-paragraph-bold">Can't get more than £159.55 a week by filling gaps</p>
+         </div>
       </div>
     </div>
 
@@ -208,29 +218,20 @@ jQuery(document).ready(function($){
   }
 });
 
-$(function() {
-    $('#row_dim').hide(); 
+// Years picker
+$(function() 
+{
     $('#type').change(function(){
-        if($('#type').val() == 'parcel') {
-            $('#row_dim').show(); 
+        if($('#type').val() == '9') {
+          $('#spinner').delay(200).fadeOut();
+          $('#9').show(); 
         } else {
-            $('#row_dim').hide(); 
+            $('#9').hide(); 
         } 
     });
 });
 
- $(document).ready( function() {
-        $('#spinner').delay(200).fadeOut();
-      });
-
 </script>
         </div>
 </main>
-<script type="text/javascript">
-    function removeWhitespaces() {
-        var txtbox = document.getElementById('search-main');
-        txtbox.value = txtbox.value.replace(/\s/g, "");
-    }
-
-</script>
 {% endblock %}
