@@ -51,6 +51,15 @@ router.post('/forecast_QQ123456C', function (req, res) {
   console.log(years);
   console.log(age);
   res.render('volnicsv16/forecast_QQ123456C', {age: age, years: years})
-})
+});
+
+router.post('/forecast_DD678910C', function (req, res) {
+  var years = req.body.years
+  var age = req.body.age;
+  console.log(years);
+  console.log(age);
+  res.render('volnicsv16/forecast_DD678910C', {age: age, years: years})
+});
+
 
 
