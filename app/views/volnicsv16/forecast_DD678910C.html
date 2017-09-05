@@ -55,6 +55,7 @@
       <div class="column-two-thirds">
         <h3 class="heading-small">Estimate up to 5 April 2017</h3>
         <p class="small-paragraph">£120.10 a week</span>
+          <hr>
           <h3 class="heading-small">Forecast</h3>
 
            <div id="age">
@@ -66,18 +67,18 @@
 
                 <div class="form-group form-group-day">
                 </div>
-                <legend class="small-paragraph-bold">When will they contribute National Insurance until or when did they stop contributing?</legend>
+                <legend class="small-paragraph">When will they contribute National Insurance until or when did they stop contributing?</legend>
 
                   <br>
                   <div class="form-group form-group-year">
-                    <label for="dob-year">Age</label>
+                    <label for="dob-year" class="small-paragraph">Age</label>
                     <input class="form-control" id="age" name="age" type="number" pattern="[0-9]*" min="0" max="68" value="{{ age | default('67') }}">
                   </div>
 
 
                   <br>
 
-            </fieldset>     <button type="submit" class="button" id="button" style="margin-top: -10px">Calculate</button>
+            </fieldset>     <button type="submit" class="button" id="button" style="margin-top: -20px">Calculate</button>
           </form>
             
           
@@ -85,15 +86,16 @@
 
             <br>
             <p class="small-paragraph-bold">Contributing until they're 60 on 11 November 2022 </p>
-             <div class="ni-wrapper">
+             <div class="ni-wrapper" style="margin-top: -10px">
             <div class="ni-improve4">Forecast<br>
               £138.34 a week</p></div>
               <div class="ni-years4-cost">Years added<br>
                 4 (up to 5 April 2022)
               </div>
               </div>
+           <hr style="margin-top: -10px">
               <p class="heading-small" style="margin-top: 0px;">Can improve £138.34 a week by filling gaps </p>
-            <div class="ni-wrapper">
+            <div class="ni-wrapper"  style="margin-bottom: -15px">
               <div class="ni-improve4"><span style="font-weight: 700">Improve to</span></div>
               <div class="ni-gaps4"><span style="font-weight: 700">Shortfalls</span></div>
               <div class="ni-amount4"><span style="font-weight: 700">Total cost</span></div>
@@ -181,7 +183,7 @@
           
             <br>
        <p class="small-paragraph-bold">Contributing until they're 67 on 11 November 2029 </p>
-             <div class="ni-wrapper">
+             <div class="ni-wrapper" style="margin-top: -10px">
             <div class="ni-improve4">Forecast<br>
               £159.55 a week</p></div>
               <div class="ni-years4-cost">Years added<br>
@@ -189,6 +191,7 @@
               </div>
               </div>
             </div>
+            <hr style="margin-top: -10px">
             <p class="heading-small" style="margin-top: 0px;">Can't get more than £159.55 a week by filling gaps</p>
           </div>
 
