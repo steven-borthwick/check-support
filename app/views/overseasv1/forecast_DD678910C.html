@@ -6,17 +6,18 @@
 
 {% block content %}
 <main id="content" role="main">
-    <div class="grid-row">
-       
-             <div class="column-full">
+  <div class="grid-row">
+
+    <div class="column-full">
       <div id="global-breadcrumb" class="breadcrumb">
-        <a class="link-back" href="results_confirm2?search=DD678910C">Back</a>
+        <a class="link-back" href="results_confirm2?search=QQ123456C">Back</a>
       </div>
       <h1 class="heading-large">DD678910C</h1>
       <div class="tab-content">
         <div class="js-tabs nav-tabs">
           <ul class="tabs-nav" role="tablist">
             <li class="active"><a href="#current-sp-value" id="tab-overview">Overview</a></li>
+            <li><a href="#options-sp-value" id="tab-options">Filling gaps</a></li>
             <li><a href="#improve-sp-value" id="tab-contracting-out">Starting amount</a></li>
             <li><a href="#contracted-out" id="tab-ni-record">National Insurance summary</a></li>
           </ul>
@@ -26,66 +27,188 @@
     <div id="forecast" class="tab-pane">
       <div class="column-half">
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">State Pension date</span> <span class="forecast-data-bold2">17 February 2023</span>
+          <span class="forecast-label2">State Pension date</span> <span class="forecast-data-bold2">15 May 2030</span>
         </div>
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Final relevant year (FRY)</span> <span class="forecast-data-bold2  forecast-label2-inline">2021-22</span>
-           <span class="forecast-label2">&nbsp;</span><span class="forecast-data-bold2  forecast-label2-inline">6 years to FRY
+          <span class="forecast-label2">Final relevant year (FRY)</span> <span class="forecast-data-bold2">2029-30</span>
+          <span class="forecast-label2">&nbsp;</span><span class="forecast-data-bold2  forecast-label2-inline">13 years to FRY
           </span>
         </div>
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">COPE estimate</span> <span class="forecast-data-bold2">£0</span>
-          <span class="forecast-no-data  forecast-header forecast-label2-inline">Was never contracted out</span>
+          <span class="forecast-label2">COPE estimate</span> <span class="forecast-data-bold2">£1.13 a week</span>
+          <span class="forecast-no-data  forecast-header forecast-label2-inline">Was contracted out</span>
         </div>
       </div>
       <div class="column-half">
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Estimate up to 5 April 2016
-          </span> <span class="forecast-data-bold2">£124.52 a week</span>
-          <span class="forecast-label2 forecast-label2-inline">Qualifying years</span> <span class="forecast-data-bold2 forecast-label2-inline">29</span>
+          <span class="forecast-label2">Estimate up to 5 April 2017
+          </span> <span class="forecast-data-bold2">£110.61 a week</span>
+          <span class="forecast-label2 forecast-label2-inline">Qualifying years</span> <span class="forecast-data-bold2 forecast-label2-inline">20</span>
         </div>
 
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£155.65 a week</span>
-          <span class="forecast-label2 forecast-label2-inline">Future years needed</span> <span class="forecast-data-bold2 forecast-label2-inline">6</span>
+          <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£159.55 a week</span>
+          <span class="forecast-label2 forecast-label2-inline">Future years needed</span> <span class="forecast-data-bold2 forecast-label2-inline">11</span>
 
         </div>
         <div class="forecast-wrapper2">
-            <span class="forecast-label2">Most they can get</span> <span class="forecast-data-bold2">£155.65 a week</span>
+          <span class="forecast-label2">Most they can get</span> <span class="forecast-data-bold2">£159.55 a week</span>
         </div>
 
       </div>
     </div>
-      <div id="contracting-out" class="tab-pane">
+    <div id="options" class="tab-pane">
+      <div class="column-two-thirds">
+   
+       
+         <h3 class="heading-small">Improve by filling gaps</h3>
+     
+       <table class="vnics"><tr><th>Gaps filled</th><th>Old rules</th><th>New rules</th></tr>
+        <tr><td>Estimate 05 April 2017</td><td class="vnics_bold">£110.61 a week</td><td>£90.01 a week</td></tr>
+           <tr><td>1 pre 2016 gap</td><td class="vnics_bold">£114.69 a week</td><td>£94.57 a week</td></tr>
+              <tr><td>1 post 2016 gap</td><td class="vnics_bold">£115.17 a week<td>£94.57 a week</td></tr>
+               <tr><td>2 pre</td><td class="vnics_bold">£118.77 a week</td><td>£99.13 a week</td></tr>
+              <tr><td>2 (1 pre, 1 post)</td><td class="vnics_bold">£119.25 a week</td><td>£99.13 a week</td></tr>
+                  <tr><td>3 pre</td><td class="vnics_bold">£122.84 a week</td><td>£103.68 a week</td></tr>
+                <tr><td>3 (2 pre, 1 post)</td><td class="vnics_bold">£123.33 a week</td><td>£103.68 a week</td></tr>
+                <tr><td>4 pre</td><td class="vnics_bold">£126.92 a week</td><td>£108.25 a week</td></tr>
+                <tr><td>4 (3 pre, 1 post)</td><td class="vnics_bold">£127.40 a week</td><td>£108.25 a week</td></tr>
+                 <tr><td>5 pre</td><td class="vnics_bold">£131.00 a week</td><td>£112.81 a week</td></tr>
+                  <tr><td>5 (4 pre, 1 post)</td><td class="vnics_bold">£131.48 a week</td><td>£112.81 a week</td></tr>         
+                   <tr><td>6 pre</td><td class="vnics_bold">£135.07 a week</td><td>£117.37 a week</td></tr>
+                <tr><td>6 (5 pre, 1 post)</td><td class="vnics_bold">£135.56 a week</td><td>£117.37 a week</td></tr>
+                <tr><td>7 pre</td><td class="vnics_bold">£139.15 a week</td><td>£121.92 a week</td></tr>
+                <tr><td>7 (6 pre, 1 post)</td><td class="vnics_bold">£139.63 a week</td><td>£121.92 a week</td></tr>
+                <tr><td>8 pre</td><td class="vnics_bold">£143.23 a week</td><td>£126.48 a week</td></tr>
+                <tr><td>8 (7 pre, 1 post)</td><td class="vnics_bold">£143.71 a week</td><td>£126.48 a week</td></tr>
+                <tr><td>9 pre</td><td class="vnics_bold">£147.30 a week</td><td>£131.04 a week</td></tr> 
+                <tr><td>9 (8 pre, 1 post)</td><td class="vnics_bold">£147.79 a week</td><td>£131.04 a week</td></tr>
+              
+                <tr><td>10 pre</td><td class="vnics_bold">£151.38 a week</td><td>£135.59 a week</td></tr>
+                   <tr><td>10 (9 pre, 1 post)</td><td class="vnics_bold">£151.86 a week</td><td>£135.60 a week</td></tr>  
+                <tr><td>11 (10 pre, 1 post)</td><td class="vnics_bold">£155.94 a week</td><td>£140.15 a week</td></tr>
+              </table>
+
+      
+      </div>
+    </div>
+
+    <div id="contracting-out" class="tab-pane">
+      <div class="column-two-thirds">
+        <h3 class="heading-small">Starting amount at April 2016 is £117.16 a week</h3>
+      </div>
       <div class="column-one-half column-half-left">
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Amount A basic</span> <span class="forecast-data-bold2">£115.42 a week</span>
-           <span class="forecast-label2 forecast-label2-inline">Additional pension</span> <span class="forecast-data-bold2 forecast-label2-inline">£3.24 a week</span>
-             <span class="forecast-label2 forecast-label2-inline">Total</span> <span class="forecast-data-bold2 forecast-label2-inline">£122.26 a week</span>
+          <p class="heading-small">Old rules</p>
+          <span class="forecast-label2">Basic</span>
+          <span class="forecast-data2">£79.53 a week</span>
+
+          <span class="forecast-label2 forecast-label2-inline">Additional Pension and Grad</span>
+          <span class="forecast-data2 forecast-label2-inline">£28.38 a week</span>
+          <span class="forecast-label2 forecast-label2-inline">Total</span>
+          <span class="forecast-data-bold2 forecast-label2-inline">£107.91 a week
+          </span>
         </div>
       </div>
 
       <div class="column-one-half column-half-right">
         <div class="forecast-wrapper2">
-          <span class="forecast-label2">Amount B
-          </span> <span class="forecast-data-bold2">£124.52 a week</span>
-          <span class="forecast-label2 forecast-label2-inline">RDA</span> <span class="forecast-data-bold2 forecast-label2-inline">£0</span>
+          <p class="heading-small">New rules</p>
+          <span class="forecast-label2">New State Pension</span>
+          <span class="forecast-data2">£88.94 a week</span>
+
+          <span class="forecast-label2 forecast-label2-inline">RDA</span> <span class="forecast-data2 forecast-label2-inline">£1.13 a week</span>
+          <span class="forecast-label2 forecast-label2-inline">Total</span> <span class="forecast-data-bold2 forecast-label2-inline">£87.81 a week</span>
         </div>
       </div>
+      
     </div>
     <div id="ni-record" class="tab-pane">
       <div class="column-two-thirds">
 
-        <h2 class="heading-small">Years which aren't full</h2>
-        <p>15 years are too late to pay</p>
-        <dl class="accordion">
-          <dt>
-            <div class="ni-wrapper">
-              <div class="ni-years2">2016-17</div>
-              <div class="ni-full2">This year is not available yet</div>
-            </div>
-          </dt>
-        </dl>
+      <h2 class="heading-small">Shortfalls in record</h2>
+            <p>11 years can be filled
+             <br>7 years are too late to pay</p>
+            <dl class="accordion2">
+              <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2017-18</div>
+                  <div class="ni-notfull">This year is not available yet</div>
+                </div>
+              </dt>
+              <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2016-17</div>
+                  <div class="ni-notfull">£733.20 shortfall</div>
+                </div>
+              </dt>
+                <dt class="display-2016">
+              <div>
+		Pre 2016
+		</div>
+       
+              </dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2015-16</div>
+                  <div class="ni-notfull">£733.20 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2014-15</div>
+                  <div class="ni-notfull">£722.80 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2013-14</div>
+                  <div class="ni-notfull">£704.60 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2012-13</div>
+                  <div class="ni-notfull">£702.00 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2011-12</div>
+                  <div class="ni-notfull">£655.20 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2010-11</div>
+                  <div class="ni-notfull">£626.60 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2009-10</div>
+                  <div class="ni-notfull">£626.60 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2008-09</div>
+                  <div class="ni-notfull">£421.20 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2007-08</div>
+                  <div class="ni-notfull">£405.00 shortfall</div>
+                </div>
+              </dt>
+               <dt>
+                <div class="ni-wrapper">
+                  <div class="ni-years2">2006-07</div>
+                  <div class="ni-notfull">£392.60 shortfall</div>
+                </div>
+              </dt>
+             
+            </dl>
       </div>
       <div class="column-one-third">
         <aside class="govuk-related-items dwp-related-items" role="complementary">
@@ -95,19 +218,20 @@
 
               <nav role="navigation" aria-labelledby="parent-subsection">
                 <ul class="list-bullets">
-                  <li><span style="font-size: 16px"><span style="font-weight: 700">29</span> qualifying years </span></li>
-                  <li><span style="font-size: 16px"><span style="font-weight: 700">6</span> years to contribute before 05 April 2022</span></li>
-                  <li><span style="font-size: 16px"><span style="font-weight: 700">15</span> years with a shortfall</span></li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">20</span> qualifying years </span>
+                  </li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">13</span> years to contribute before 05 April
+                    2030</span>
+                  </li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">18</span> years with a shortfall</span>
+                  </li>
                 </ul>
-              </ul>
+            </ul>
             </nav>
-          </aside>
-
-        </div>
+        </aside>
+      </div>
     </div>
-
   </div>
-
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -128,7 +252,21 @@ jQuery(document).ready(function($){
     $("#forecast").show();
     $("#ni-record").hide();
     $("#contracting-out").hide();
+    $("#contracting-out").hide();
+    $("#options").hide();
     window.location.hash = "#lie-forecast";
+    return false;
+  });
+
+  $("a#tab-options").click(function() {
+    $(".tabs-nav li").removeClass("active");
+
+    $(this).parent().addClass("active");
+     $("#options").show();
+    $("#forecast").hide();
+    $("#ni-record").hide();
+    $("#contracting-out").hide();
+    window.location.hash = "#lie-options";
     return false;
   });
 
@@ -139,6 +277,7 @@ jQuery(document).ready(function($){
     $("#ni-record").show();
     $("#contracting-out").hide();
     $("#forecast").hide();
+    $("#options").hide();
     window.location.hash = "#lie-ni-record";
     return false;
   });
@@ -151,6 +290,7 @@ jQuery(document).ready(function($){
     $("#contracting-out").show();
     $("#ni-record").hide();
     $("#forecast").hide();
+    $("#options").hide();
     window.location.hash = "#lie-contracting-out";
     return false;
   });
@@ -164,6 +304,10 @@ jQuery(document).ready(function($){
 
   else if (window.location.hash === "#lie-contracting-out") {
     $("a#tab-contracting-out").trigger('click');
+  }
+
+  else if (window.location.hash === "#lie-optionst") {
+    $("a#tab-options").trigger('click');
   }
 });
 
