@@ -1,4 +1,5 @@
 {% extends "layout_unbranded.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <main id="content" role="main">
   <div class="grid-row">
 
@@ -71,7 +72,7 @@
 
            <div id="date" {% if years == undefined %} style="display:none;" {% endif %}>
                <form>
-            <fieldset class="inline" data-required data-error="Choose Yes or No">
+            <fieldset data-required data-error="Choose Yes or No">
               <legend><span style="font-weight: 700">When will they stop?</span></legend>
 <br>
               <div class="form-group">
@@ -119,7 +120,12 @@
 
           
             {% if years == '2022' %}
-
+             <script>
+              $(document).ready (function() {
+                var element = $('#notspaamount').offset().top
+                $(window).scrollTop(element)
+              })
+            </script>
             <br>
             <h3 class="heading-small">Forecast based on contributing until November 2022 </h3>
              <p>
