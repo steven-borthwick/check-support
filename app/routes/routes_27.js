@@ -18,7 +18,7 @@ router.get('/results_confirm2', function (req, res) {
 
   var search = req.query.search ? req.query.search.toLowerCase() : '';
 
-  res.render('volnicsv17/results_confirm2', {
+  res.render('volnicsv18/results_confirm2', {
     'search' : req.query.search,
     'QQ123456C': search === 'qq123456c',
     'DD678910C': search === 'dd678910c',
@@ -40,20 +40,20 @@ router.get('/issue_address_customer', function (req, res) {
   if (thirdparties === 'Third party') {
     res.redirect('issue_address_third_party')
   } else {   
-    res.render('volnicsv17/issue_address_customer')
+    res.render('volnicsv18/issue_address_customer')
   }
   
 });
 
 router.post('/forecast_QQ123456C', function (req, res) {
-
   var years = req.body.years
   var age = req.body.age;
   var month = req.body.month;
   console.log(years);
   console.log(age);
   console.log(month);
-  res.render('volnicsv17/forecast_QQ123456C', {age: age, years: years, month: month,}) 
+
+  res.render('volnicsv18/forecast_QQ123456C', {age: age, years: years, month: month,})
 });
 
 router.post('/forecast_DD678910C', function (req, res) {
@@ -61,7 +61,8 @@ router.post('/forecast_DD678910C', function (req, res) {
   var age = req.body.age;
   console.log(years);
   console.log(age);
-  res.render('volnicsv17/forecast_DD678910C', {age: age, years: years})
+  res.render('volnicsv18/forecast_DD678910C', {age: age, years: years})
 });
+
 
 
