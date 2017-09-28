@@ -72,11 +72,11 @@
 
            <div id="date" {% if years == undefined %} style="display:none;" {% endif %}>
                <form>
-            <fieldset data-required data-error="Choose Yes or No">
+            <fieldset>
               <legend><span style="font-weight: 700">When will they stop?</span></legend>
 <br>
               <div class="form-group">
-                <label class="block-label" for="spa">
+                <label class="block-label" for="spa" style="margin-bottom: 10px">
                             <input id="spa" type="radio" name="spa" value="spa">State Pension age (11 November 2029)
                         </label>
                 <label class="block-label" for="notspa">
@@ -86,10 +86,11 @@
               </div>
           </form>
                <div id="spaamount" style="display: none">
+                <div style="background-color: #DEE0E2; padding: 10px 0 10px 10px; margin: 20px 0 20px 0; display: block; clear: both;">
              <h3 class="heading-small">Forecast based on contributing until November 2029 </h3>
              <p>
               £159.55 a week</p>
-          
+              </div>
               <p class="heading-small" style="margin-top: 0px;">Cannot improve this by filling gaps </p>
            
             </div>
@@ -132,10 +133,10 @@
             </script>
             <br>
             <div id="spinner" style="background: url('/public/images/loading.gif') no-repeat; height: 1000px"></div>
-            <h3 class="heading-small">Forecast based on contributing until November 2022 </h3>
+            <div style="background-color: #DEE0E2; padding: 10px 0 10px 10px; margin: 20px 0 20px 0; block; clear: both;"><h3 class="heading-small">Forecast based on contributing until November 2022 </h3>
              <p>
               £138.34 a week</p>
-         
+              </div>
               <p class="heading-small" style="margin-top: 0px;">Can improve this by filling gaps </p>
             <div class="ni-wrapper" style="margin-bottom: -15px">
               <div class="ni-improve4"><span style="font-weight: 700;">Improve to</span></div>
@@ -231,11 +232,12 @@
        </div>
          
           <div id="age" {% if age == undefined %} style="display:none;" {% endif %}>
+             <div style="background-color: #DEE0E2; padding: 10px 0 10px 10px; margin: 20px 0 20px 0; display: block; clear: both;">
              <h3 class="heading-small">Estimate up to 5 April 2017 </h3>
-             <div class="ni-wrapper" style="margin-top: -10px">
+           
             <p>
               £120.10 a week</p>
-           
+           </div>
               <p class="heading-small" style="margin-top: 0px;">Can improve this by filling gaps </p>
             <div class="ni-wrapper" style="margin-bottom: -15px">
               <div class="ni-improve4"><span style="font-weight: 700;">Improve to</span></div>
