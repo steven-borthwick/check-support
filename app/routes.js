@@ -30,6 +30,8 @@ var routes25 = require('./routes/routes_25');
 var routes26 = require('./routes/routes_26');
 var routes27 = require('./routes/routes_27');
 var routes28 = require('./routes/routes_28');
+var routes29 = require('./routes/routes_29');
+var routes30 = require('./routes/routes_30');
 
 // Route index page
 router.use('/third_parties', routes1);
@@ -59,6 +61,7 @@ router.use('/overseasv1', routes25);
 router.use('/volnicsv17', routes26);
 router.use('/volnicsv18', routes27);
 router.use('/volnicsv1a_zoom', routes28);
-
+router.use('/volnicsv19', routes29);
+router.use('/overseasv2', routes30);
 
 module.exports = router
