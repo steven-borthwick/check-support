@@ -1,0 +1,245 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            <div id="global-breadcrumb" class="breadcrumb">
+            <a class="link-back" href="results_confirm2?search=qq123456c">Back</a>
+                
+      {% include "includes/header_QQ123456C.html" %} 
+           
+            <div class="grid-row">
+                <div class="column-two-thirds">
+                    <h2 class="heading-medium">Address</h2>
+                    <form>
+                    <fieldset class="inline" data-required data-error="Choose Yes or No">
+                        <legend><span style="font-weight: 700">Is the address to send the forecast in the UK or overseas? </span></legend>
+                        <div class="form-group">
+                            <label class="block-label" for="radio-1">
+                            <input id="radio-1" type="radio" name="address_UK" value="Yes" checked="checked"> UK
+                        </label>
+                            <label class="block-label" for="radio-2">
+                            <input id="radio-2" type="radio" name="address_UK" value="No"> Overseas
+                        </label>
+
+                        </div>
+                    </fieldset>
+                    </form>
+                    <div id="id1">
+                        <fieldset>
+
+                            <div style="width: 53%; float: left;">
+                                <label for="address_postcode" class="form-label">
+                                Postcode
+                            </label>
+                                <input type="text" id="address_postcode" name="address.postcode" class="form-control" style="width: 90%">
+                            </div>
+                            <div style="width: 47%; float: left;">
+                                <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 25px">
+                                Find address
+                            </button>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- ID1 postcode end -->
+                    <!-- ID2 address finder start  -->
+
+                    <div id="id2" class="js-hidden">
+                        <div style="width: 53%; float: left;">
+                            <label for="address_postcode" class="form-label">
+                            Postcode
+                        </label>
+                            <input type="text" id="address_postcode" name="address.postcode" class="form-control" style="width: 90%" value="CH99 1XX">
+                        </div>
+                        <div style="width: 47%; float: left;">
+                            <button type="button" id="find-again" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 25px">
+                            Find address
+                        </button>
+                        </div>
+                        <br>
+                        </fieldset>
+                        <!-- address wrapper start -->
+                        <div id="select-address">
+                            <form method="post" action="" class="form">
+                                <fieldset>
+                                    <input type="hidden" id="address_postcode" name="address.postcode" class="text hidden">
+
+                                    <label for="address_uprn" class="form-label-bold">
+                                <br>Select address
+                            </label>
+                                    <div class="validation-wrapper">
+                                        {% include "includes/address_list.html" %}
+                                    </div>
+                                    <!-- address wrapper end -->
+                                </fieldset>
+
+                                <p style="padding-top: 20px;">
+                                    <!--  <a href="print_v2?address_same=Yes" class="button">
+              Generate forecast
+            </a>-->
+                                    <a href="change_address_postcode" id="cant-find">
+              I can’t find the address in the list<span class="visuallyhidden"> section</span>
+            </a>
+                                </p>
+                            </form>
+                        </div>
+                        <div id="showMe" class="js-hidden" style="margin-top: 50px">
+                            <br>
+                            <form action="print?address_same=Yes" class="form">
+                                <div class="form-group">
+                                    <fieldset class="multi-line-field">
+
+                                        <legend class="label"><span style="font-weight: 700">Check address</span></legend>
+                                        <label for="lineOne" class="visuallyhidden">Address line one</label>
+                                        <input type="text" id="lineOne" name="lineOne" class="form-control" value="10 West Avenue">
+                                        <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                                        <input type="text" id="lineTwo" name="lineTwo" class="form-control" value="Birkenhead">
+                                    </fieldset>
+                                    <label for="city" class="hidden">Address line three</label>
+                                    <div class="validation-wrapper">
+                                        <input type="text" id="city" name="city" class="form-control" value="Wirral">
+                                    </div>
+                                    <label for="region" class="hidden">Address line four</label>
+                                    <div class="validation-wrapper">
+                                        <input type="text" id="region" name="region" class="form-control">
+                                    </div>
+                                    <label for="country">Postcode</label>
+                                    <div class="validation-wrapper">
+                                        <input type="text" id="country" name="country" class="form-control form-control-1-3" value="CH99 1XX">
+                                    </div>
+                                    <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                            </form>
+                            <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- ID2 address select end  -->
+
+                    <div id="id3" class="js-hidden">
+                        <div style="width: 50%; float: left;">
+                            <label for="address_postcode" class="form-label">
+                            Postcode
+                        </label>
+                            <input type="text" id="address_postcode" name="address.postcode" class="form-control" style="width: 90%" value="CH99 1XX">
+                        </div>
+                        <div style="width: 50%; float: left;">
+                            <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 25px">
+                            Find address
+                        </button>
+                            <br>
+                            <br>
+                        </div>
+                        <form action="print?address_same=Yes" class="form">
+                            <div class="form-group">
+                                <fieldset class="multi-line-field">
+
+                                    <legend class="label">Address</legend>
+                                    <label for="lineOne" class="visuallyhidden">Address line one</label>
+                                    <input type="text" id="lineOne" name="lineOne" class="form-control">
+                                    <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                                    <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+                                </fieldset>
+                                <label for="city" class="hidden">Address line three</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="city" name="city" class="form-control">
+                                </div>
+                                <label for="region" class="hidden">Address line four</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="region" name="region" class="form-control">
+                                </div>
+                                <label for="country">Postcode</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="country" name="country" class="form-control form-control-1-3" value="CH99 1XX">
+                                </div>
+                                <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                        </form>
+                        <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
+                        </div>
+
+
+                    </div>
+
+                    <div id="id4" class="js-hidden">
+
+                        <form action="print?address_same=Yes" class="form">
+                            <div class="form-group">
+                                <fieldset class="multi-line-field">
+                                    <legend class="label">Address</legend>
+                                    <label for="lineOne" class="visuallyhidden">Address line one</label>
+                                    <input type="text" id="lineOne" name="lineOne" class="form-control">
+                                    <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                                    <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+                                </fieldset>
+                                <label for="city" class="hidden">Address line three</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="city" name="city" class="form-control">
+                                </div>
+                                <label for="region" class="hidden">Address line four</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="region" name="region" class="form-control">
+                                </div>
+                                <label for="country">Country</label>
+                                <div class="validation-wrapper">
+                                    <input type="text" id="country" name="country" class="form-control">
+                                </div>
+                                <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                        </form>
+                        <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
+                        <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function removeWhitespaces() {
+    var txtbox = document.getElementById('search-main');
+    txtbox.value = txtbox.value.replace(/\s/g, "");
+}
+$(document).on('click', '#find-address', function() {
+    $('#id1,#id3,#id4').addClass('js-hidden');
+    $('#id2').removeClass('js-hidden');
+});
+
+$(document).on('click', '#find-again', function() {
+  $('#showMe').addClass('js-hidden');
+  $('#select-address').removeClass('js-hidden');
+});
+
+$(document).on('click', '#cant-find', function(e) {
+    e.preventDefault();
+    $('#id2').addClass('js-hidden');
+    $('#id3').removeClass('js-hidden');
+});
+
+$(document).on('click', 'input[type="radio"]', function(e) {
+    if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+        if ($(this).attr('id') === 'radio-1') {
+            $('#id1').removeClass('js-hidden');
+            $('#id2,#id3,#id4').addClass('js-hidden');
+        } else {
+            $('#id4').removeClass('js-hidden');
+            $('#id1,#id2,#id3').addClass('js-hidden');
+        }
+    }
+});
+
+
+$(document).on('change', '#uprn', function() {
+$('#select-address').addClass('js-hidden');
+$('#showMe').removeClass('js-hidden');
+$('#id3').addClass('js-hidden');
+$('#id4').addClass('js-hidden');
+});
+</script>
+{% endblock %}
