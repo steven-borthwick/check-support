@@ -38,10 +38,12 @@
               Yes - continue and issue forecast or answer enquiries
             </label>
             <label for="radio-part-3" class="block-label">
-              <input id="radio-part-3" type="radio" name="thirdparties" value="Third party">
+              <input id="radio-part-3" type="radio" name="thirdparties" value="Third party"  data-target="kick-out">
              No - complete a BR19 and a CA254
             </label>
-
+             <div class="panel panel-border-wide js-hidden" id="kick-out" style="margin-top: 100px;">
+                    Continuing will take you out of this record
+                     </div>
           </fieldset>
         </div>
                         <input type="submit" class="button" value="Continue">
@@ -80,7 +82,7 @@
               <input id="radio-part-2" type="radio" name="thirdparties" value="Customer">
               Yes - continue and issue forecast or answer enquiries
             </label>
-            <label for="radio-part-3" class="block-label"  data-target="kick-out">
+            <label for="radio-part-3" class="block-label" data-target="kick-out">
               <input id="radio-part-3" type="radio" name="thirdparties" value="Third party">
              No - complete a BR19 and a CA254
             </label>
