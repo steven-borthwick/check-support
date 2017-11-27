@@ -5,16 +5,20 @@
 {% endblock %}
 
 {% block content %}
+
 <main id="content" role="main">
     <div class="grid-row">
         <div class="column-full">
-            <div id="global-breadcrumb" class="breadcrumb">
-            <a class="link-back" href="results_confirm2?search=qq123456c">Back</a>
+         
                 
-      {% include "includes/header_QQ123456C.html" %} 
+      {% include "includes/header_DD678910C4.html" %} 
+      <div id="global-breadcrumb" class="breadcrumb">
+            <a class="link-back" href="choice_DD678910C">Back</a>
+            </div>
            
             <div class="grid-row">
                 <div class="column-full">
+                        <h2 class="heading-large">Send forecast</h2>
                      <h2 class="heading-medium">Customer name</h2>
             <div class="grid-row">
                 <div class="column-quarter">
@@ -23,9 +27,9 @@
                         <fieldset class="multi-line-field" data-required data-error="Select title">
                             <label class="form-label" for="select-box">Title</label>
                             <select id="select-box" class="form-control" style="width: 100%">
-                                <option selected value="">Mr</option>
+                                <option>Mr</option>
                                 <option>Mrs</option>
-                                <option>Miss</option>
+                                <option selected value="">Miss</option>
                                 <option>Ms</option>
                                 <option>Dr</option>
                                 <option>Prof</option>
@@ -43,7 +47,7 @@
                 <div class="form-group">
                     <fieldset class="multi-line-field" data-required data-error="Enter first names">
                         <label class="form-label" for="first-name">Initials</label>
-                        <input id="first-name" type="text" class="form-control form-control-full" value="A D">
+                        <input id="first-name" type="text" class="form-control form-control-full" value="B J">
                     </fieldset>
                 </div>
             </div>
@@ -52,7 +56,7 @@
                 <div class="form-group">
                     <fieldset class="multi-line-field" data-required data-error="Enter last name">
                         <label class="form-label" for="last-name">Last name</label>
-                        <input id="last-name" type="text" class="form-control form-control-full"  value="Patterson">
+                        <input id="last-name" type="text" class="form-control form-control-full"  value="Williams">
                     </fieldset>
                 </div>
             </div>
@@ -236,7 +240,7 @@
                                 </div>
                                 <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
                         </form>
-                        <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
+                        <p><a href="print_dd?address_same=Yes" class="button">Generate forecast</a></p>
                         <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
                         </div>
                     </div>

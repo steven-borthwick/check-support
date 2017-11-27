@@ -1,0 +1,66 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+<style>
+{% include "includes/name_dob_styles.html" %}
+    </style>
+<main id="content" role="main">
+
+   <div class="grid-row">
+  
+            <div class="column-full">
+                    {% include "includes/header_DD678910C2.html" %}
+        
+        
+         <div class="grid-row">
+                     
+                    <div class="column-one-half column-one-half-left">
+                        <h2 class="heading-medium">Print and send a forecast</h2>
+                       
+                        <form action="issue_address_customer_dd" method="get" class="form">
+                        <div class="form-group">
+          <fieldset>
+            <legend style="font-weight: 700">
+             Send forecast to the customer or a third party?
+            </legend>
+
+            <label for="radio-part-2" class="block-label">
+              <input id="radio-part-2" type="radio" name="thirdparties" value="Customer" checked="checked">
+              Customer
+            </label>
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="thirdparties" value="Third party">
+              Third party  
+            </label>
+
+          </fieldset>
+        </div>
+                        <input type="submit" class="button" value="Continue">
+                        </form>
+                    </div>
+                    <div class="column-one-half column-one-half-right">
+                        <h2 class="heading-medium">Deal with enquiries</h2>
+                        <p>Get information that will help to answer customer queries.</p>
+                        <p><a href="forecast_DD678910C#lie-forecast" class="button">View information</a></p>
+                    </div>
+                    </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#calculate', function () {
+  $('#id1').hide();
+  $('#id2').show();
+});
+
+</script>
+{% endblock %}

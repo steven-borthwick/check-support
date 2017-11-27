@@ -16,7 +16,7 @@ router.get('/ole_details', function (req, res) {
   
     var search = req.query.search ? req.query.search.toLowerCase() : '';
   
-    res.render('name_dob2/ole_details', {
+    res.render('name_dob3/ole_details', {
       'search' : req.query.search,
       'QQ123456C': search === 'qq123456c',
       'DD678910C': search === 'dd678910c',
@@ -34,7 +34,7 @@ router.get('/results_confirm2', function (req, res) {
 
   var search = req.query.search ? req.query.search.toLowerCase() : '';
 
-  res.render('name_dob2/results_confirm2', {
+  res.render('name_dob3/results_confirm2', {
     'search' : req.query.search,
     'QQ123456C': search === 'qq123456c',
     'DD678910C': search === 'dd678910c',
@@ -56,7 +56,7 @@ router.get('/issue_address_customer', function (req, res) {
   if (thirdparties === 'Third party') {
     res.redirect('issue_address_third_party')
   } else {   
-    res.render('name_dob2/issue_address_customer')
+    res.render('name_dob3/issue_address_customer')
   }
   
 });
@@ -67,7 +67,7 @@ router.get('/issue_address_customer_dd', function (req, res) {
   if (thirdparties === 'Third party') {
     res.redirect('issue_address_third_party')
   } else {   
-    res.render('name_dob2/issue_address_customer_dd')
+    res.render('name_dob3/issue_address_customer_dd')
   }
   
 });
@@ -78,7 +78,7 @@ router.post('/forecast_QQ123456C', function (req, res) {
   var age = req.body.age;
   console.log(years);
   console.log(age);
-  res.render('name_dob2/forecast_QQ123456C', {age: age, years: years})
+  res.render('name_dob3/forecast_QQ123456C', {age: age, years: years})
 })
 
 

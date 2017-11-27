@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block content %}
+<style>
+        .nav {display: none}
+             </style>
 <main id="content" role="main">
    
 
@@ -53,44 +56,26 @@
                 {% elif DD678910C %}
                 <li class="result employer">
                     <div class="grid-row">
-                        <div class="column-full">
-                        <div id="global-breadcrumb">
-                            <a class="link-back" href="index">Back</a>
-                        </div>
-                 
-                     {% include "includes/header_DD678910C.html" %}
-                     <div class="grid-row">
-                    <div class="column-one-half column-one-half-left">
-                        <h2 class="heading-medium">Print and send a forecast</h2>
-                        <p>Enter name and address to send the forecast.</p>
-                        <form action="issue_address_customer_dd" method="get" class="form">
-                        <div class="form-group">
-          <fieldset>
-            <legend style="font-weight: 700">
-             Send forecast to the customer or a third party?
-            </legend>
-
-            <label for="radio-part-2" class="block-label">
-              <input id="radio-part-2" type="radio" name="thirdparties" value="Customer" checked="checked">
-              Customer
-            </label>
-            <label for="radio-part-3" class="block-label">
-              <input id="radio-part-3" type="radio" name="thirdparties" value="Third party">
-              Third party  
-            </label>
-
-          </fieldset>
-        </div>
-                        <input type="submit" class="button" value="Continue">
-                        </form>
-                    </div>
-                    <div class="column-one-half column-one-half-right">
-                        <h2 class="heading-medium">Deal with enquiries</h2>
-                        <p>Get information that will help to answer customer queries.</p>
-                        <p><a href="forecast_DD678910C#lie-forecast" class="button">View information</a></p>
-                    </div>
-                    </div>
-                </li>
+   <div class="column-two-thirds">
+     <h1 class="heading-large">
+      Results for "{{search}}"
+     </h1>
+     <form id="header-search" class="site-search" action="results_confirm2" method="get" role="search">
+       <div class="form-group">
+         <fieldset data-required data-error="Enter a valid NI number for example QQ123456C">
+           <label for="search-main" class="hidden">Search NI numbers</label>
+           <input name="search" id="search-main" title="Search" class="form-control" type="text" autofocus value="{{search}}">
+           <input class="submit" type="submit" value="Search" onclick="removeWhitespaces()">
+       </div>
+       </fieldset>
+       <hr>
+       <h3 class="heading-medium">Miss Bridget Jade Williams</h3>
+       <p>Date of Birth <span style="font-weight: 700">4 May 1963</span></p>
+       <p></p><a href="choice_DD678910C" class="button">Continue</a></p>
+     </form>
+   </div>
+ </div>
+            </li>
                 {% elif FF123456C %}
 
                <li class="result employer">
