@@ -1049,6 +1049,13 @@ accordion dd {
 	}
 }
 
+.search
+{
+	@media only screen and (max-width: 640px) {
+		width: 80%; 
+	}
+}
+
 .postcode {
 	width: 37%; float: left;
 	@media only screen and (max-width: 640px) {
