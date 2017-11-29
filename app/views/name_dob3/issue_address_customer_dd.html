@@ -290,7 +290,8 @@ $(document).on('click', 'input[type="radio"]', function(e) {
 });
 
 
-$(document).on('change', '#uprn', function() {
+$(document).on('change', '#uprn', function(e) {
+    e.preventDefault();
 $('#select-address').addClass('js-hidden');
 $('#showMe').removeClass('js-hidden');
 $('#id3').addClass('js-hidden');
@@ -298,6 +299,7 @@ $('#id4').addClass('js-hidden');
 });
 
 $(document).on('click', '#edit-name', function() {
+
   $('#edit-name-fields').removeClass('js-hidden');
 });
 </script>
