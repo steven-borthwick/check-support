@@ -1049,6 +1049,21 @@ accordion dd {
 	}
 }
 
+.postcode {
+	width: 37%; float: left;
+	@media only screen and (max-width: 640px) {
+		width: 50%;
+	}
+}
+
+.find-address {
+	width: 37%; float: left;
+	@media only screen and (max-width: 640px) {
+		width: 50%;
+	}
+}
+
+
 
     
    
