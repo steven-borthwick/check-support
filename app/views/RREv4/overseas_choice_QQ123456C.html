@@ -1,93 +1,86 @@
-{% extends "layout_unbranded.html" %}
-
-{% block page_title %}
-  GOV.UK prototype kit
-{% endblock %}
-
-{% block content %}
+{% extends "layout_unbranded.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
 <main id="content" role="main">
-   <div class="grid-row">
-                    <div class="column-two-thirds">
-                    <div id="global-breadcrumb">
-                        <a class="link-back" href="index">Back</a>
-                    </div>
-                    <h1 class="heading-large">QQ123456C</h1>
-                    <div class="panel panel-border-wide alert-warning">Has paid Married Woman's Reduced Rate Election (RRE)</div>
-                    </div>
-                    </div>
-                     <div class="grid-row">
-                    <div class="column-two-thirds">
-                     
-                       <p>To issue a statement or answer enquiries you need to confirm their </p> 
-                        <ul class="list-bullet"> <li>marital status  </li>
-                          <li>husband's date of birth if they're married</li></ul>
-                          <br>
-                        <form action="" method="get" class="form">
-                        <div class="form-group">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div id="global-breadcrumb">
+        <a class="link-back" href="index">Back</a>
+      </div>
+      <h1 class="heading-large">QQ123456C</h1>
+      <div class="panel panel-border-wide alert-warning">Has paid Married Woman's Reduced Rate Election (RRE)</div>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <p>To issue a statement or answer enquiries you need to confirm their </p>
+      <ul class="list-bullet">
+        <li>marital status </li>
+        <li>husband's date of birth if they're married</li>
+      </ul>
+      <br>
+      <form action="" method="get" class="form">
+        <div class="form-group">
           <fieldset>
             <legend style="font-weight: 700">
-             What is their marital status?
+              What is their marital status?
             </legend>
 
-            <label for="radio-part-2" class="block-label"  data-target="example-other-address">
-              <input id="radio-part-2" type="radio" name="thirdparties" value="Customer">
-              Married
+            <label for="radio-part-2" class="block-label" data-target="example-other-address">
+              <input id="radio-part-2" type="radio" name="thirdparties" value="Customer"> Married
             </label>
             <label for="radio-part-3" class="block-label">
-              <input id="radio-part-3" type="radio" name="thirdparties" value="Third party">
-             Divorced or widowed
+              <input id="radio-part-3" type="radio" name="thirdparties" value="Third party"> Divorced or widowed
             </label>
 
           </fieldset>
           <div class="panel panel-border-narrow js-hidden" id="example-other-address">
 
-              <h2 class="heading-small">
-                What is their husband's date of birth?
-              </h2>
+            <h2 class="heading-small">
+              What is their husband's date of birth?
+            </h2>
 
-              <fieldset class="form-group">
-                  <legend></legend>
-                  <div class="form-date">
-        
-                    <div class="form-group form-group-day">
-                      <label for="dob-day">Day</label>
-                      <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
-                    </div>
-        
-                    <div class="form-group form-group-month">
-                      <label for="dob-month">Month</label>
-                      <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                    </div>
-        
-                    <div class="form-group form-group-year">
-                      <label for="dob-year">Year</label>
-                      <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
-                    </div>
-        
-                  </div>
-                  <br>
-                  
-                </fieldset>
-            </div>
+            <fieldset class="form-group">
+              <legend></legend>
+              <div class="form-date">
+
+                <div class="form-group form-group-day">
+                  <label for="dob-day">Day</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+
+                <div class="form-group form-group-month">
+                  <label for="dob-month">Month</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+
+                <div class="form-group form-group-year">
+                  <label for="dob-year">Year</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                </div>
+
+              </div>
+              <br>
+
+            </fieldset>
+          </div>
         </div>
-                        <a href="results_confirm2?search=QQ123456C" class="button">Continue</a>
-                        </form>
-                    </div>
-                    
-                    </div>
+        <a href="results_confirm2?search=QQ123456C" class="button">Continue</a>
+      </form>
+    </div>
+
+  </div>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-// function show(elementId) {
-//   document.getElementById("id1").style.display = "none";
-//   document.getElementById("id2").style.display = "block";
-//   document.getElementById(elementId).style.display = "block";
-// }
+  // function show(elementId) {
+  //   document.getElementById("id1").style.display = "none";
+  //   document.getElementById("id2").style.display = "block";
+  //   document.getElementById(elementId).style.display = "block";
+  // }
 
-$(document).on('click', '#calculate', function () {
-  $('#id1').hide();
-  $('#id2').show();
-});
+  $(document).on('click', '#calculate', function () {
+    $('#id1').hide();
+    $('#id2').show();
+  });
 
-</script>
-{% endblock %}
+</script> {% endblock %}

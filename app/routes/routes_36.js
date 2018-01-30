@@ -64,4 +64,23 @@ router.post('/forecast_DD678910C', function (req, res) {
   res.render('volnicsv21/forecast_DD678910C', {age: age, years: years})
 });
 
+router.get('/ole_details', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('volnicsv21/ole_details', {
+    'search' : req.query.search,
+    'LL074589A': search === 'll074589a',
+    'LL081267C': search === 'll081267c',
+    'FF123456C': search === 'ff123456c',
+    'FF654321B': search === 'ff654321b',
+    'NK678910D': search === 'nk678910d',
+    'NT678910A': search === 'nt678910a',
+    'ZZ345678A': search === 'zz345678a',
+    'BG345678A': search === 'bg345678a'
+  });
+});
+
+
+
 
