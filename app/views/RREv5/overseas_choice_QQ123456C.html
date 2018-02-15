@@ -21,46 +21,28 @@
             </legend>
 
             <label for="radio-part-2" class="block-label" data-target="Married-dob">
-              <input id="radio-part-2" type="radio" name="rre" value="Married"> Married
+              <input id="radio-part-2" type="radio" name="rre" value="Married"> Married or in a civil partnership
             </label>
             <div class="panel panel-border-narrow js-hidden" id="Married-dob">
-
-              <h2 class="heading-small">
-                What is their husband's date of birth?
-              </h2>
-  
-              <fieldset class="form-group">
-                <legend></legend>
-                <div class="form-date">
-  
-                  <div class="form-group form-group-day">
-                    <label for="dob-day">Day</label>
-                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
-                  </div>
-  
-                  <div class="form-group form-group-month">
-                    <label for="dob-month">Month</label>
-                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                  </div>
-  
-                  <div class="form-group form-group-year">
-                    <label for="dob-year">Year</label>
-                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
-                  </div>
-  
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    Is their spouse or civil partner:
+                  </legend>
+      
+                  
+                
+                  <label for="radio-gender-1" class="block-label">
+                    <input id="radio-gender-1" type="radio" name="gender" value="Male"> Male
+                  </label>  
+                  <label for="radio-gender-2" class="block-label">
+                    <input id="radio-gender-2" type="radio" name="gender" value="Female">Female
+                  </label>
+                  </fieldset>
                 </div>
-                <br>
-  
-              </fieldset>
-              </div>
-            <label for="radio-part-3" class="block-label" data-target="Civil-dob">
-              <input id="radio-part-3" type="radio" name="rre" value="In a Civil Partnership">In a civil partnership
-            </label>
-            <div class="panel panel-border-narrow js-hidden" id="Civil-dob">
-
-              <h2 class="heading-small">
-                What is their partner's date of birth?
-              </h2>
+              <p>
+                What is their spouse or civil partner's date of birth?
+              <p>
 
               <fieldset class="form-group">
                 <legend></legend>
@@ -86,6 +68,8 @@
 
               </fieldset>
               </div>
+           
+           
             <label for="radio-part-4" class="block-label">
               <input id="radio-part-4" type="radio" name="rre" value="Divorced"> Divorced or widowed
             </label>
