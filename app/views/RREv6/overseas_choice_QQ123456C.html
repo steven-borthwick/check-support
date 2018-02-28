@@ -1,0 +1,57 @@
+{% extends "layout_unbranded.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div id="global-breadcrumb">
+        <a class="link-back" href="issue_address_customer_QQ123456C">Back</a>
+      </div>
+      <h1 class="heading-large">Check the marital status for QQ123456C</h1>
+      <!--<div class="panel panel-border-wide alert-warning">Has paid Married Woman's Reduced Rate Election (RRE)</div>-->
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+     
+      <form action="married_choice_QQ123456C" method="get" class="form">
+        <div class="form-group">
+      
+          <fieldset>
+            <legend style="font-weight: 700">
+              What is their marital status?
+            </legend>
+
+            <label for="radio-part-2" class="block-label" data-target="Married-dob">
+              <input id="radio-part-2" type="radio" name="rre" value="Married"> Married or in a civil partnership
+            </label>
+            
+           
+            <label for="radio-part-4" class="block-label">
+              <input id="radio-part-4" type="radio" name="rre" value="Divorced"> Divorced or widowed
+            </label>
+
+          </fieldset>
+        
+           
+            </div>
+         
+          <input type="submit" class="button" value="Continue">
+      </form>
+      </div>
+
+    </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+  // function show(elementId) {
+  //   document.getElementById("id1").style.display = "none";
+  //   document.getElementById("id2").style.display = "block";
+  //   document.getElementById(elementId).style.display = "block";
+  // }
+
+  $(document).on('click', '#calculate', function () {
+    $('#id1').hide();
+    $('#id2').show();
+  });
+
+</script> {% endblock %}
