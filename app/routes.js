@@ -48,6 +48,7 @@ var routes43 = require('./routes/routes_43');
 var routes44 = require('./routes/routes_44');
 var routes45 = require('./routes/routes_45');
 var routes46 = require('./routes/routes_46');
+var routes47 = require('./routes/routes_47');
 
 // Route index page
 router.use('/third_parties', routes1);
@@ -95,6 +96,7 @@ router.use('/welsh2', routes43);
 router.use('/RREv5', routes44);
 router.use('/RREv6', routes45);
 router.use('/RREv7', routes46);
+router.use('/RREv8', routes47);
 
 
 module.exports = router
