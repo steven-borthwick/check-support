@@ -1,0 +1,51 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+
+        
+      <div class="column-two-thirds">
+
+      
+      <div id="id1">
+          <div id="global-breadcrumb">
+              <a class="link-back" href="javascript:history.back()">Back</a>
+            </div>
+            <div class="slides">
+                <h1 class="heading-large">Forecast sent</h1>
+                <p class="text">The forecast will be sent by GOV.UK Notify. There's no need to send it to a printer. </p>
+      
+  
+              </div><!-- ID2 address select end  -->
+            
+            
+        <p><a href="index" class="button next validation-submit">Finish</a></p>
+
+
+      
+
+
+    </div>
+  </div>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#print-pdf', function () {
+  $('#id1').hide();
+  $('#id2').show();
+});
+
+</script>
+{% endblock %}

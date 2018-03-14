@@ -49,6 +49,8 @@ var routes44 = require('./routes/routes_44');
 var routes45 = require('./routes/routes_45');
 var routes46 = require('./routes/routes_46');
 var routes47 = require('./routes/routes_47');
+var routes48 = require('./routes/routes_48');
+var routes49 = require('./routes/routes_49');
 
 // Route index page
 router.use('/third_parties', routes1);
@@ -97,6 +99,8 @@ router.use('/RREv5', routes44);
 router.use('/RREv6', routes45);
 router.use('/RREv7', routes46);
 router.use('/RREv8', routes47);
+router.use('/notifyv1', routes48);
+router.use('/notifyv2', routes49);
 
 
 module.exports = router
