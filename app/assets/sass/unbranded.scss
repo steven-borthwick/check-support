@@ -70,6 +70,50 @@ $toolkit-font-stack: $helvetica-regular;
     margin-left: 0;
 }
 
+// Gov nav
+
+.nav2 {
+    background-color: #dee0e2;
+    overflow: hidden;
+}
+
+.nav-pri2 {
+    width: 500px;
+    float: left;
+    margin: 0;
+}
+
+.nav-pri2 li {
+    float: left;
+    margin: 0;
+}
+
+.nav-inner2 {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.nav-pri2 li.cur a, .nav-pri2 li.cur a:hover {
+    background-color: #005EA5;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-pri2 li.cur a:hover {
+    background-color: #043860;
+}
+
+
+.nav-pri2 li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #0b0c0c;
+    margin-right: none;
+    margin-left: 0;
+}
+
+
 // search and forms
 #header-search input.submit {
 	width: 40px;
