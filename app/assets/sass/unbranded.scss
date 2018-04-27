@@ -266,6 +266,8 @@ $toolkit-font-stack: $helvetica-regular;
 	.nav-tabs li.active a {
 		border: none;
 		border-bottom: 1px solid #bfc1c3;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 }
 
