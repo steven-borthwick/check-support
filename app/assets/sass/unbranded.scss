@@ -100,7 +100,7 @@ $toolkit-font-stack: $helvetica-regular;
 }
 
 .nav-pri2 li.cur a:hover {
-    background-color: #043860;
+	background-color: #00467B;
 }
 
 
@@ -116,7 +116,7 @@ $toolkit-font-stack: $helvetica-regular;
 
 // search and forms
 #header-search input.submit {
-	width: 40px;
+	width: 39px;
 	height: 40px;
     border: 0;
     background-color: #000;
@@ -125,6 +125,8 @@ $toolkit-font-stack: $helvetica-regular;
 	border-radius: 0;
 	overflow: hidden;
 	text-indent: -5000px;
+	margin: 0 0 0 -5px;
+	padding-bottom: 2px;
 	cursor: pointer;
 	color: #fff;
     background-image: url(/public/images/search_icon.png);
@@ -1138,6 +1140,28 @@ max-width:none;
 }
 }
 
+.feedback-footer {
+	background-color: #005ea5; 
+	padding: 5px 0px 5px 20px; 
+	margin: 0 12% -20px 12%;
+	max-width: 960px;
+	@media only screen and (max-width: 640px) {
+		width: 100%;
+		margin: 0 0 0 0;
+}
+}
 
-    
+.feedback-border {
+	border-top: 10px solid #005ea5;
+	@media only screen and (max-width: 640px) {
+		border-top: 0;
+	}
+}
+
+.footer-wrapper
+{
+	@media only screen and (max-width: 640px) {
+		width: 100%;
+	}
+}
    

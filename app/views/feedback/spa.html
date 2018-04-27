@@ -1,0 +1,91 @@
+{% extends "layout_unbranded4.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+
+        
+      <div class="column-two-thirds">
+
+      <div id="global-breadcrumb">
+        <a class="link-back" href="forecast_QQ123456C#lie-forecast">Back</a>
+      </div>
+      <div id="id1">
+  
+        <h1 class="heading-large">Calculate State Pension age for QQ123456C</h1>
+        <div class="forecast-wrapper2">
+         <div style="width: 85%;"><span class="forecast-label2">State Pension date</span> <span class="forecast-data-bold2">11 November 2025</span>
+         </div>
+        </div>
+       <form class="form dob">
+
+        <fieldset class="form-group">
+          <legend>Enter date of birth</legend>
+          <div class="form-date">
+
+            <div class="form-group form-group-day">
+              <label for="dob-day">Day</label>
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+            </div>
+
+            <div class="form-group form-group-month">
+              <label for="dob-month">Month</label>
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+
+            <div class="form-group form-group-year">
+              <label for="dob-year">Year</label>
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+            </div>
+
+          </div>
+          <br>
+          
+        </fieldset>
+        <button type="button" id="calculate" class="button next validation-submit" data-validation-sources="postcode">
+                Calculate
+              </button>
+        
+      </div>
+      <!-- ID1 postcode end -->
+      <!-- ID2 address finder start  -->
+
+      <div id="id2" style="display:none">
+       <h1 class="heading-large">Calculate State Pension age for QQ123456C</h1>
+       <div class="forecast-wrapper2">
+         <div style="width: 85%;"><span class="forecast-label2">State Pension date</span> <span class="forecast-data-bold2">11 November 2025</span>
+         </div>
+       </div>
+       <div class="forecast-wrapper2">
+          <div style="width:85%;"><span class="forecast-label2">State Pension age</span> <span class="forecast-data-bold2">67 years, 3 months and 2 days</span>
+         </div>
+         </div>
+         <p class="small-paragraph"><a href="spa">Start again</a></p>
+        <p class="small-paragraph"><a href="forecast_QQ123456C#lie-forecast">Back</a></p>
+
+      </div><!-- ID2 address select end  -->
+
+
+    </div>
+  </div>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#calculate', function () {
+  $('#id1').hide();
+  $('#id2').show();
+});
+
+</script>
+{% endblock %}

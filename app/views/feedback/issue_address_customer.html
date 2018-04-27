@@ -1,4 +1,4 @@
-{% extends "layout_unbranded3.html" %}
+{% extends "layout_unbranded4.html" %}
 
 {% block page_title %}
   GOV.UK prototype kit
@@ -10,7 +10,7 @@
         <div class="column-two-thirds">
             <div id="global-breadcrumb" class="breadcrumb">
             <a class="link-back" href="results_confirm2?search=qq123456c">Back</a>
-            <h1 class="heading-large" style="margin-top: 11px">Enter details for QQ123456C</h1>
+            <h1 class="heading-large">Enter details for QQ123456C</h1>
             <h2 class="heading-medium">Name</h2>
             </div>
         </div>
@@ -21,12 +21,13 @@
                    
                         <fieldset class="multi-line-field" data-required data-error="Select title">
                            <label class="form-label" for="select-box">Title</label>
-<select id="select-box" class="form-control" style="width: 100%">
+<select id="select-box" class="form-control" style="width: 100%; height: 40px">
   <option disable selected value="">Please select</option>
   <option>Mr</option>
   <option>Mrs</option>
   <option>Miss</option>
   <option>Ms</option>
+  <option>Mx</option>
   <option>Dr</option>
   <option>Prof</option>
   <option>Rev</option>
@@ -93,7 +94,7 @@
                     <!-- ID2 address finder start  -->
 
                     <div id="id2" class="js-hidden">
-                        <div style="width: 53%; float: left;">
+                        <div style="width:38%; float: left;">
                             <label for="address_postcode" class="form-label">
                             Postcode
                         </label>
@@ -135,7 +136,7 @@
                                 <div class="form-group">
                                     <fieldset class="multi-line-field">
 
-                                        <legend class="label"><span style="font-weight: 700">Check address</span></legend>
+                                        <legend class="label"><span style="font-weight: 700">UK address</span></legend>
                                         <label for="lineOne" class="visuallyhidden">Address line one</label>
                                         <input type="text" id="lineOne" name="lineOne" class="form-control" value="10 West Avenue">
                                         <label for="lineTwo" class="visuallyhidden">Address line two</label>
@@ -155,7 +156,7 @@
                                     </div>
                                     <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
                             </form>
-                            <div class="multiple-choice form-group panel panel-border-narrow" style="margin-top: 50px; padding-bottom: 20px">
+                            <div class="multiple-choice form-group" style="margin-top: 50px; padding-bottom: 20px">
                                 
                                 <h3 class="heading-small">Select if they request their forecast in Welsh</h3>
                                     <label for="nationality_other" class="block-label" data-target="example_nationality_other">
@@ -209,7 +210,7 @@
                                 </div>
                                 <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
                         </form>
-                        <div class="multiple-choice form-group panel panel-border-narrow" style="margin-top: 50px; padding-bottom: 20px">
+                        <div class="multiple-choice form-group" style="margin-top: 50px; padding-bottom: 20px">
                                 
                             <h3 class="heading-small">Select if they request their forecast in Welsh</h3>
                                 <label for="nationality_other2" class="block-label" data-target="example_nationality_other2">
@@ -228,7 +229,7 @@
                         <form action="print?address_same=Yes" class="form">
                             <div class="form-group">
                                 <fieldset class="multi-line-field">
-                                    <legend class="label">Address</legend>
+                                    <legend class="label"><span style="font-weight: 700">Overseas address</span></legend>
                                     <label for="lineOne" class="visuallyhidden">Address line one</label>
                                     <input type="text" id="lineOne" name="lineOne" class="form-control">
                                     <label for="lineTwo" class="visuallyhidden">Address line two</label>
@@ -248,7 +249,7 @@
                                 </div>
                                 <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
                         </form>
-                        <div class="multiple-choice form-group panel panel-border-narrow" style="margin-top: 50px; padding-bottom: 20px">
+                        <div class="multiple-choice form-group" style="margin-top: 50px; padding-bottom: 20px">
                                 
                             <h3 class="heading-small">Select if they request their forecast in Welsh</h3>
                                 <label for="nationality_other3" class="block-label" data-target="example_nationality_other3">

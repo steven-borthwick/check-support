@@ -87,9 +87,10 @@ DWP
     {% block after_header %}{% endblock %}
 
     {% block content %}{% endblock %}
-
+ 
     <footer class="group js-footer" id="footer" role="contentinfo">
-        <div class="footer-wrapper">
+         <div class="feedback-footer"><a href="feedback" rel="license" target="_blank" style="color: white">Give us feedback</a> <span style="color: white">to help improve this service</span></p></div>
+        <div class="footer-wrapper feedback-border">
             {% block footer_top %}{% endblock %}
     
             <div class="footer-meta">
@@ -98,10 +99,10 @@ DWP
     
                 <div class="open-government-licence">
                
-               <div style="padding-left:12%">
+               <div style="padding-left:13%">
                 
                   
-                    {% block licence_message %}<p><a href="feedback" rel="license" target="_blank">Give us feedback (opens in a new window)</a> to help improve this service</p>{% endblock %}
+                    {% block licence_message %}<!--<p><a href="feedback" rel="license" target="_blank">Give us feedback</a> to help improve this service</p>-->{% endblock %}
               
                   </div>
                 </div>
