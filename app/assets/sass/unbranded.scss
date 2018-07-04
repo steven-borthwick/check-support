@@ -1044,9 +1044,8 @@ accordion dd {
 
 
 .name-wrapper4 {
-	padding: 15px; margin-top: 0;
+	padding: 15px 0 15px 0; margin-top: 0;
 	 width: 100%;
-	 background: #F8F8F8;
 	 border-bottom: 1px solid #bfc1c3;
 	@media only screen and (max-width: 640px) {
 		margin-left: -15px;
@@ -1055,8 +1054,10 @@ accordion dd {
 }
 
 .name-name4 {
-	 font-size: 22px; font-weight: 700;
+	 font-size: 28px; font-weight: 700;
 	width: 100%; 
+	padding-top: 10px;
+	padding-bottom: 20px;
 	float: left;
 	@media only screen and (max-width: 640px) {
 		width: 100%;
