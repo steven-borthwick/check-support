@@ -55,6 +55,7 @@ var routes50 = require('./routes/routes_50');
 var routes51 = require('./routes/routes_51');
 var routes52 = require('./routes/routes_52');
 var routes53 = require('./routes/routes_53');
+var routes54 = require('./routes/routes_54');
 
 // Route index page
 router.use('/third_parties', routes1);
@@ -109,6 +110,6 @@ router.use('/feedback', routes50);
 router.use('/feedback2', routes51);
 router.use('/third_partiesv4', routes52);
 router.use('/volnicsv23', routes53);
-
+router.use('/RREv9', routes54);
 
 module.exports = router
